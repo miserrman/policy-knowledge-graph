@@ -1,8 +1,4 @@
-
 from IPython.display import Latex
-
-
-# In[10]:
 
 
 from numpy import *

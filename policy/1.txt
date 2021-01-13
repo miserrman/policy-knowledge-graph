@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html style="font-size: 17.0667px;">
+<head>
+    <title>政策资讯</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="https://www.fujiansme.com/statics/css/wap/weui.min.css">
+    <link rel="stylesheet" href="https://www.fujiansme.com/statics/css/wap/jquery-weui.min.css">
+    <link rel="stylesheet" href="https://www.fujiansme.com/statics/css/wap/style1.css">
+    <script src="https://www.fujiansme.com/statics/js/wap/jquery-3.3.1.min.js"></script>
+    <style type="text/css">
+        .left{float: left;}
+        .right{float: right;}
+        .prt{position: relative;}
+        .select_contain{font-size: 0.3rem;color: #333;line-height: 38px;
+            position: fixed;top: 2.5rem;width: 100%;background: #fff;
+            z-index: 9999;padding: 10px;
+        }
+        .select_item{position: relative;}
+        .select_item.right{margin-right:20px;}
+        .select_tit{margin-right: 10px;}
+        .select_result{width: 5rem;line-height: 2rem;border:1px solid #ccc;text-align: center;border-radius: 4px;text-indent: -8px;cursor:pointer;}
+        .select_result .triangle{border:5px solid transparent;border-top:5px solid #666;position: absolute; top: 0.7rem;right: 0.2rem;}
+        .select_item ul{display:none;position:absolute;top:100%;right:0;width:100px;background: #f3f3f3;border:1px solid #ccc;border-radius:0 0 4px 4px; border-top-color:#f3f3f3;margin-top:-4px;}
+        .select_item ul li{text-align: center;cursor: pointer;}
+        .select_item ul li:hover{background: #ff7519; color: #fff;}
+        .mobile-header~.page__bd_after_search{top:2.7rem;!important;position: absolute;}
+        .policy-selection {border-bottom: 1px solid #eeeeee;}
+    </style>
+    <script>
+        function select(){
+            $(document).click(function(){
+                $(".select_module_con ul").slideUp();
+            })
+            var module=$(".select_result");
+            module.click(function(e){
+                e.stopPropagation();
+                var ul=$(this).next();
+                ul.stop().slideToggle();
+                ul.children().click(function(e){
+                    e.stopPropagation();
+                    $(this).parent().prev().children("span").text($(this).text());
+                    ul.stop().slideUp();
+                })
+            })
+        }
+        $(function(){
+            select();
+        })
+    </script>
+</head>
+<body ontouchstart>
+<div class="page__bd_after_search bgfff">
+    <div class="weui-cell weui-cell_select policy-selection">
+        <div class="weui-cell__bd" style="position:relative;">
+            <select class="weui-select" onchange="changeColor(this)">
+                <option value="11">政策级别</option>
+                                <option class="show-loading" value="40" >国家部委级政策</option>
+                                <option class="show-loading" value="41" selected>省级厅级政策</option>
+                                <option class="show-loading" value="42" >设区市政策</option>
+                            </select>
+        </div>
+        <div class="weui-cell__bd">
+            <select class="weui-select" onchange="changeColor(this)">
+                <option value="11">政策类型</option>
+                                <option class="show-loading" value="14" >政策文件</option>
+                                <option class="show-loading" value="15" >政策申报</option>
+                                <option class="show-loading" value="16" >政策解读</option>
+                                <option class="show-loading" value="1063" >招商政策</option>
+                            </select>
+        </div>
+    </div>
+    <div class="weui-panel__bd p3line" id="info-list" >
+                <a href="http://www.fujiansme.com/index.php?m=content&c=index&a=show&catid=925&id=5013" class="weui-media-box weui-media-box_appmsg show-loading">
+            <div class="weui-media-box_text">
+                <h4 class="weui-media-box__title"> 福建省发展和改革委员会 福建省财政厅 ...</h4>
+                <p class="weui-media-box__desc"></p>
+            </div>
+        </a>
+                <a href="http://www.fujiansme.com/index.php?m=content&c=index&a=show&catid=925&id=5014" class="weui-media-box weui-media-box_appmsg show-loading">
+            <div class="weui-media-box_text">
+                <h4 class="weui-media-box__title"> 福建省发展和改革委员会等十七部门关于印...</h4>
+                <p class="weui-media-box__desc"></p>
+            </div>
+        </a>
+                <a href="http://www.fujiansme.com/index.php?m=content&c=index&a=show&catid=925&id=4999" class="weui-media-box weui-media-box_appmsg show-loading">
+            <div class="weui-media-box_text">
+                <h4 class="weui-media-box__title">福建省发展和改革委员会等十一部门关于支持...</h4>
+                <p class="weui-media-box__desc"></p>
+            </div>
+        </a>
+                <a href="http://www.fujiansme.com/index.php?m=content&c=index&a=show&catid=925&id=5001" class="weui-media-box weui-media-box_appmsg show-loading">
+            <div class="weui-media-box_text">
+                <h4 class="weui-media-box__title">福建省工业和信息化厅 福建省发展和改革委...</h4>
+                <p class="weui-media-box__desc"></p>
+            </div>
+        </a>
+                <a href="http://www.fujiansme.com/index.php?m=content&c=index&a=show&catid=925&id=5002" class="weui-media-box weui-media-box_appmsg show-loading">
+            <div class="weui-media-box_text">
+                <h4 class="weui-media-box__title">福建省知识产权局关于确认2020年度省知...</h4>
+                <p class="weui-media-box__desc"></p>
+            </div>
+        </a>
+                <a href="http://www.fujiansme.com/index.php?m=content&c=index&a=show&catid=925&id=4991" class="weui-media-box weui-media-box_appmsg show-loading">
+            <div class="weui-media-box_text">
+                <h4 class="weui-media-box__title">福建省工业和信息化厅关于印发《2020年...</h4>
+                <p class="weui-media-box__desc"></p>
+            </div>
+        </a>
+                <a href="http://www.fujiansme.com/index.php?m=content&c=index&a=show&catid=925&id=5003" class="weui-media-box weui-media-box_appmsg show-loading">
+            <div class="weui-media-box_text">
+                <h4 class="weui-media-box__title">第二批福建省省级工业旅游示范基地名单公示</h4>
+                <p class="weui-media-box__desc"></p>
+            </div>
+        </a>
+                <a href="http://www.fujiansme.com/index.php?m=content&c=index&a=show&catid=925&id=4988" class="weui-media-box weui-media-box_appmsg show-loading">
+            <div class="weui-media-box_text">
+                <h4 class="weui-media-box__title">福建省工业和信息化厅福建省人力资源和社会...</h4>
+                <p class="weui-media-box__desc"></p>
+            </div>
+        </a>
+                <a href="http://www.fujiansme.com/index.php?m=content&c=index&a=show&catid=925&id=4992" class="weui-media-box weui-media-box_appmsg show-loading">
+            <div class="weui-media-box_text">
+                <h4 class="weui-media-box__title">关于拟认定首批化工园区（化工集中区）名单...</h4>
+                <p class="weui-media-box__desc"></p>
+            </div>
+        </a>
+                <a href="http://www.fujiansme.com/index.php?m=content&c=index&a=show&catid=925&id=4958" class="weui-media-box weui-media-box_appmsg show-loading">
+            <div class="weui-media-box_text">
+                <h4 class="weui-media-box__title">福建省科学技术厅 福建省工业和信息化厅 ...</h4>
+                <p class="weui-media-box__desc"></p>
+            </div>
+        </a>
+            </div>
+    <div class="weui-loadmore">
+        <i class="weui-loading"></i>
+        <span class="weui-loadmore__tips">正在加载</span>
+    </div>
+</div>
+<script src="https://www.fujiansme.com/statics/js/wap/jquery-3.3.1.min.js"></script>
+<script src="https://www.fujiansme.com/statics/js/wap/fastclick.js"></script>
+<script src="https://www.fujiansme.com/statics/js/wap/jquery-weui.min.js"></script>
+<script src="https://www.fujiansme.com/statics/js/wap/swiper.min.js"></script>
+<script src="https://www.fujiansme.com/statics/js/wap/appjs-common.js"></script>
+<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.3.2.js"></script>
+<script>
+    window.onFFCS_JBReady = function () {
+        FFCS_JB.app_window.showSearch('https://www.fujiansme.com/index.php?m=content&c=index&a=policy_lists&catid=11&dosubmit=1&title=','5',function(ret){
+            if('1'==ret){
+                //FFCS_JB.toast(' success');
+            }else {
+                //FFCS_JB.toast(' failure');
+            }
+        });
+    }
+
+    //ios-js
+    function setupWebViewJavascriptBridge(callback) {
+        if (window.WebViewJavascriptBridge) { return callback(WebViewJavascriptBridge); }
+        if (window.WVJBCallbacks) { return window.WVJBCallbacks.push(callback); }
+        window.WVJBCallbacks = [callback];
+        var WVJBIframe = document.createElement('iframe');
+        WVJBIframe.style.display = 'none';
+        WVJBIframe.src = 'https://__bridge_loaded__';
+        document.documentElement.appendChild(WVJBIframe);
+        setTimeout(function() { document.documentElement.removeChild(WVJBIframe) }, 0)
+    }
+
+    // ios-搜索框
+    function showSearch() {
+        setupWebViewJavascriptBridge (function (bridge) {
+            var param = {};
+            param.searchUrl = 'https://www.fujiansme.com/index.php?m=content&c=index&a=policy_lists&catid=11&dosubmit=1&title=';
+            param.type = 5;
+            bridge.callHandler('showSearch', param, function responseCallback(result) {})
+        })
+    }
+	var ua = navigator.userAgent.toLowerCase();
+	if(ua.match(/MicroMessenger/i)=="micromessenger") {
+		wx.miniProgram.getEnv((res)=>{
+           if (!res.miniprogram) {
+               window.onload = showSearch();
+           }
+        })
+	}else{
+		window.onload = showSearch();
+	}
+    $(function() {
+        FastClick.attach(document.body);
+    });
+    function changeColor(selector) {
+        if(selector.selectedIndex > 0) {
+            selector.style.color = '#ff7519';
+        } else {
+            selector.style.color = '#000';
+        }
+        var catid = $(selector).val();
+        if(catid){
+            get_ajax_data(catid);
+        }
+    }
+    function get_ajax_data(catid) {
+        get_data(10,1,catid);
+    }
+    var loading = false;
+    var count = 10;  //初始展示记录数
+    var total = "1176";  //总记录数
+    var loaded = false; //加载完成flag
+    var page = 1; //页码
+    if(total > count) {
+        $(document.body).infinite().on("infinite", function() {
+            if(loading | loaded) return;
+            loading = true;
+            var load_num = 10; //每次加载记录数
+            if(total - count < 10) {
+                load_num = total - count;
+            }
+            get_data(load_num);
+        });
+    }else{
+        $('.weui-loadmore').hide();
+    }
+
+    $("#zc_type").change(function () {
+        var catid = $("#zc_type").val();
+        get_data(10,1,catid);
+    });
+    $("#zc_level").change(function () {
+        var catid = $("#zc_level").val();
+        get_data(10,1,catid);
+    });
+    function get_data(load_num,is_form,catid) {
+        var is_catid = catid ? catid : "41";
+        page++;
+        if(is_form){
+            var url = "m=content&c=index&a=policy_lists&dosubmit=1&catid="+is_catid;
+        }else{
+            var url = "m=content&c=index&a=policy_lists&dosubmit=1&catid="+is_catid+"&page=" + page;
+        }
+        $.ajax({
+            type: "GET",
+            url: "index.php",
+            data: url,
+            dataType: 'json',
+            success: function(data) {
+                if (data.Code == 0) {
+                    var reslength = data.Data.length;
+                    var res = new Array();
+                    if (reslength > 0) {
+                        if(is_form){
+                            $("#info-list").html('');
+                        }
+                        for(var i=0; i<reslength; i++) {
+                            res = $.makeArray(data.Data[i]);
+                            $("#info-list").append('<a href="'+res[0].url+'" class="weui-media-box weui-media-box_appmsg show-loading">'+
+                                '<div class="weui-media-box_text">'+
+                                '<h4 class="weui-media-box__title">'+ res[0].title.substring(0,20) +'...</h4>'+
+                                '<p class="weui-media-box__desc">'+ res[0].description.substring(0,65) +'...</p>' +
+                                '</div>' +
+                                '</a>');
+                            res = new Array();
+                        }
+                        $('.weui-loadmore').html('<span class="weui-loadmore__tips">加载完成</span>');
+                    } else {
+                        if(is_form){
+                            $("#info-list").html('<a style="padding: 20px 140px;" href="javascript:void(0)" class="weui-media-box weui-media-box_appmsg show-loading">'+
+                                '<div class="weui-media-box_text">'+
+                                '<h4 class="weui-media-box__title">暂无数据</h4>'+
+                                '</div>' +
+                                '</a>');
+                        }else{
+                            $('.weui-loadmore').html('<span class="weui-loadmore__tips">加载完成</span>');
+                        }
+                    }
+                }
+                $('.weui-loadmore').hide();
+            }
+        });
+        loading = false;
+        count += load_num;
+    }
+
+</script>
+</body>
+</html>

@@ -54,6 +54,7 @@ def entity_recognition(data: pd.DataFrame):
     # c = createC1(term_data)
     print(rules)
 
+
 if __name__ == '__main__':
     content = pd.read_csv('data/policy_content.csv', header=0)
     entity_recognition(content)
