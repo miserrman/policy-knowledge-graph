@@ -1,286 +1,285 @@
 <!DOCTYPE html>
-<html style="font-size: 17.0667px;">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>政策资讯</title>
-    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <link rel="stylesheet" href="https://www.fujiansme.com/statics/css/wap/weui.min.css">
-    <link rel="stylesheet" href="https://www.fujiansme.com/statics/css/wap/jquery-weui.min.css">
-    <link rel="stylesheet" href="https://www.fujiansme.com/statics/css/wap/style1.css">
-    <script src="https://www.fujiansme.com/statics/js/wap/jquery-3.3.1.min.js"></script>
-    <style type="text/css">
-        .left{float: left;}
-        .right{float: right;}
-        .prt{position: relative;}
-        .select_contain{font-size: 0.3rem;color: #333;line-height: 38px;
-            position: fixed;top: 2.5rem;width: 100%;background: #fff;
-            z-index: 9999;padding: 10px;
-        }
-        .select_item{position: relative;}
-        .select_item.right{margin-right:20px;}
-        .select_tit{margin-right: 10px;}
-        .select_result{width: 5rem;line-height: 2rem;border:1px solid #ccc;text-align: center;border-radius: 4px;text-indent: -8px;cursor:pointer;}
-        .select_result .triangle{border:5px solid transparent;border-top:5px solid #666;position: absolute; top: 0.7rem;right: 0.2rem;}
-        .select_item ul{display:none;position:absolute;top:100%;right:0;width:100px;background: #f3f3f3;border:1px solid #ccc;border-radius:0 0 4px 4px; border-top-color:#f3f3f3;margin-top:-4px;}
-        .select_item ul li{text-align: center;cursor: pointer;}
-        .select_item ul li:hover{background: #ff7519; color: #fff;}
-        .mobile-header~.page__bd_after_search{top:2.7rem;!important;position: absolute;}
-        .policy-selection {border-bottom: 1px solid #eeeeee;}
-    </style>
-    <script>
-        function select(){
-            $(document).click(function(){
-                $(".select_module_con ul").slideUp();
-            })
-            var module=$(".select_result");
-            module.click(function(e){
-                e.stopPropagation();
-                var ul=$(this).next();
-                ul.stop().slideToggle();
-                ul.children().click(function(e){
-                    e.stopPropagation();
-                    $(this).parent().prev().children("span").text($(this).text());
-                    ul.stop().slideUp();
-                })
-            })
-        }
-        $(function(){
-            select();
-        })
-    </script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>详情</title>
+    <link rel="stylesheet" href="https://www.fujiansme.com/statics/css/wap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.fujiansme.com/statics/css/wap/base-bootstrap.css">
+    <link href="https://www.fujiansme.com/statics/css/wap/style.css?v=1" rel="stylesheet" />
+    <script src="https://www.fujiansme.com/statics/js/jquery-3.3.1.min.js"></script>
+    <script src="https://www.fujiansme.com/statics/js/jquery.SuperSlide.2.1.1.js"></script>
+    <script src="https://www.fujiansme.com/statics/js/wap/bootstrap.min.js"></script>
+    <script src="https://www.fujiansme.com/statics/js/wap/base.js"></script>
 </head>
-<body ontouchstart>
-<div class="page__bd_after_search bgfff">
-    <div class="weui-cell weui-cell_select policy-selection">
-        <div class="weui-cell__bd" style="position:relative;">
-            <select class="weui-select" onchange="changeColor(this)">
-                <option value="11">政策级别</option>
-                                <option class="show-loading" value="40" >国家部委级政策</option>
-                                <option class="show-loading" value="41" selected>省级厅级政策</option>
-                                <option class="show-loading" value="42" >设区市政策</option>
-                            </select>
-        </div>
-        <div class="weui-cell__bd">
-            <select class="weui-select" onchange="changeColor(this)">
-                <option value="11">政策类型</option>
-                                <option class="show-loading" value="14" >政策文件</option>
-                                <option class="show-loading" value="15" >政策申报</option>
-                                <option class="show-loading" value="16" >政策解读</option>
-                                <option class="show-loading" value="1063" >招商政策</option>
-                            </select>
-        </div>
-    </div>
-    <div class="weui-panel__bd p3line" id="info-list" >
-                <a href="http://www.fujiansme.com/index.php?m=content&c=index&a=show&catid=925&id=5013" class="weui-media-box weui-media-box_appmsg show-loading">
-            <div class="weui-media-box_text">
-                <h4 class="weui-media-box__title"> 福建省发展和改革委员会 福建省财政厅 ...</h4>
-                <p class="weui-media-box__desc"></p>
-            </div>
-        </a>
-                <a href="http://www.fujiansme.com/index.php?m=content&c=index&a=show&catid=925&id=5014" class="weui-media-box weui-media-box_appmsg show-loading">
-            <div class="weui-media-box_text">
-                <h4 class="weui-media-box__title"> 福建省发展和改革委员会等十七部门关于印...</h4>
-                <p class="weui-media-box__desc"></p>
-            </div>
-        </a>
-                <a href="http://www.fujiansme.com/index.php?m=content&c=index&a=show&catid=925&id=4999" class="weui-media-box weui-media-box_appmsg show-loading">
-            <div class="weui-media-box_text">
-                <h4 class="weui-media-box__title">福建省发展和改革委员会等十一部门关于支持...</h4>
-                <p class="weui-media-box__desc"></p>
-            </div>
-        </a>
-                <a href="http://www.fujiansme.com/index.php?m=content&c=index&a=show&catid=925&id=5001" class="weui-media-box weui-media-box_appmsg show-loading">
-            <div class="weui-media-box_text">
-                <h4 class="weui-media-box__title">福建省工业和信息化厅 福建省发展和改革委...</h4>
-                <p class="weui-media-box__desc"></p>
-            </div>
-        </a>
-                <a href="http://www.fujiansme.com/index.php?m=content&c=index&a=show&catid=925&id=5002" class="weui-media-box weui-media-box_appmsg show-loading">
-            <div class="weui-media-box_text">
-                <h4 class="weui-media-box__title">福建省知识产权局关于确认2020年度省知...</h4>
-                <p class="weui-media-box__desc"></p>
-            </div>
-        </a>
-                <a href="http://www.fujiansme.com/index.php?m=content&c=index&a=show&catid=925&id=4991" class="weui-media-box weui-media-box_appmsg show-loading">
-            <div class="weui-media-box_text">
-                <h4 class="weui-media-box__title">福建省工业和信息化厅关于印发《2020年...</h4>
-                <p class="weui-media-box__desc"></p>
-            </div>
-        </a>
-                <a href="http://www.fujiansme.com/index.php?m=content&c=index&a=show&catid=925&id=5003" class="weui-media-box weui-media-box_appmsg show-loading">
-            <div class="weui-media-box_text">
-                <h4 class="weui-media-box__title">第二批福建省省级工业旅游示范基地名单公示</h4>
-                <p class="weui-media-box__desc"></p>
-            </div>
-        </a>
-                <a href="http://www.fujiansme.com/index.php?m=content&c=index&a=show&catid=925&id=4988" class="weui-media-box weui-media-box_appmsg show-loading">
-            <div class="weui-media-box_text">
-                <h4 class="weui-media-box__title">福建省工业和信息化厅福建省人力资源和社会...</h4>
-                <p class="weui-media-box__desc"></p>
-            </div>
-        </a>
-                <a href="http://www.fujiansme.com/index.php?m=content&c=index&a=show&catid=925&id=4992" class="weui-media-box weui-media-box_appmsg show-loading">
-            <div class="weui-media-box_text">
-                <h4 class="weui-media-box__title">关于拟认定首批化工园区（化工集中区）名单...</h4>
-                <p class="weui-media-box__desc"></p>
-            </div>
-        </a>
-                <a href="http://www.fujiansme.com/index.php?m=content&c=index&a=show&catid=925&id=4958" class="weui-media-box weui-media-box_appmsg show-loading">
-            <div class="weui-media-box_text">
-                <h4 class="weui-media-box__title">福建省科学技术厅 福建省工业和信息化厅 ...</h4>
-                <p class="weui-media-box__desc"></p>
-            </div>
-        </a>
-            </div>
-    <div class="weui-loadmore">
-        <i class="weui-loading"></i>
-        <span class="weui-loadmore__tips">正在加载</span>
-    </div>
-</div>
-<script src="https://www.fujiansme.com/statics/js/wap/jquery-3.3.1.min.js"></script>
-<script src="https://www.fujiansme.com/statics/js/wap/fastclick.js"></script>
-<script src="https://www.fujiansme.com/statics/js/wap/jquery-weui.min.js"></script>
-<script src="https://www.fujiansme.com/statics/js/wap/swiper.min.js"></script>
-<script src="https://www.fujiansme.com/statics/js/wap/appjs-common.js"></script>
+<body>	<div class="container">
+				<div class="row">
+			<div class="col-xs-12 page-header">
+				<h1>福建省科学技术厅关于组织开展2021年科技型中小企业评价工作的通知</h1>
+			</div>
+		</div>
+		<div class="row subheader">
+			<div class="col-xs-12">
+				<span>admin</span>
+				<span>2021-01-15</span>
+				<div class="right-div">
+					<img src="https://www.fujiansme.com/statics/images/wap/eye.png" />
+					<!--<span id="hits"></span>-->
+					<span>2</span>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 title_zhc">
+				<span>福建省科学技术厅关于组织开展2021年科技型中小企业评价工作的通知</span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 content_zhc">
+				<p class="MsoNormal" style="margin: 0px; padding: 0px; border: none; font-size: 16px; font-family: 宋体; line-height: 32px !important;">
+	<font face="宋体" style="margin: 0px; padding: 0px; font-size: 12pt;">各设区市科技局、平潭综合实验区经济发展局：</font></p>
+<p class="MsoNormal" style="margin: 0px; padding: 0px; border: none; font-size: 16px; font-family: 宋体; line-height: 32px !important;">
+	<font face="宋体" style="margin: 0px; padding: 0px; font-size: 12pt;">　　根据科技部火炬中心《关于开展2021年科技型中小企业评价服务工作的通知》（国科火字〔2021〕11号）的有关要求，现就我省组织开展2021年科技型中小企业评价工作的有关事项通知如下：</font></p>
+<p class="MsoNormal" style="margin: 0px; padding: 0px; border: none; font-size: 16px; font-family: 宋体; line-height: 32px !important;">
+	<font face="宋体" style="margin: 0px; padding: 0px; font-size: 12pt;">　　一、网上办理评价工作</font></p>
+<p class="MsoNormal" style="margin: 0px; padding: 0px; border: none; font-size: 16px; font-family: 宋体; line-height: 32px !important;">
+	<font face="宋体" style="margin: 0px; padding: 0px; font-size: 12pt;">　　符合条件的企业可于10月20日前登录科技部政务服务平台（网址：fuwu.most.gov.cn，以下简称政务服务平台）注册单位用户（法人）账号、选择办理科技型中小企业评价、提交《科技型中小企业信息表》，自主进行科技型中小企业评价。企业获得的2021年度科技型中小企业入库登记编号，可通过政务服务平台进行查询。</font></p>
+<p class="MsoNormal" style="margin: 0px; padding: 0px; border: none; font-size: 16px; font-family: 宋体; line-height: 32px !important;">
+	<font face="宋体" style="margin: 0px; padding: 0px; font-size: 12pt;">　　二、及时在线审查</font></p>
+<p class="MsoNormal" style="margin: 0px; padding: 0px; border: none; font-size: 16px; font-family: 宋体; line-height: 32px !important;">
+	<font face="宋体" style="margin: 0px; padding: 0px; font-size: 12pt;">　　评价工作机构应在每月末最后一个工作日完成本月属地企业提交的《信息表》审查提交工作。我厅业务管理部门将在线对评价工作机构审查通过的《信息表》进行核对，每月初对符合要求的《信息表》进行汇总，形成拟入库企业名单，并按评价工作流程进行公示，公示无异议的赋予科技型中小企业入库登记编号并公告。本年度拟入库企业公示文件发布工作将于10月31日前结束。各设区市科技局和平潭综合实验区经济发展局应督促评价工作机构及时在线进行企业评价信息形式审查工作。</font></p>
+<p class="MsoNormal" style="margin: 0px; padding: 0px; border: none; font-size: 16px; font-family: 宋体; line-height: 32px !important;">
+	<font face="宋体" style="margin: 0px; padding: 0px; font-size: 12pt;">　　三、加强企业诚信体系建设</font></p>
+<p class="MsoNormal" style="margin: 0px; padding: 0px; border: none; font-size: 16px; font-family: 宋体; line-height: 32px !important;">
+	<font face="宋体" style="margin: 0px; padding: 0px; font-size: 12pt;">　　评价工作机构应积极引导企业履行评价工作主体责任，建立健全研发支出辅助账，填报的《信息表》应与企业各类信息、账目数字相符。对不符合科技型中小企业条件、存在弄虚作假行为、不能提供有效证明材料或抽查中不提供相关材料的企业，评价工作机构还应及时提交省级科技管理部门撤销或由省级科技管理部门直接撤销登记编号，并在科技型中小企业信息服务平台上公告。被撤销登记编号的企业当年不得再次参与评价。</font></p>
+<p class="MsoNormal" style="margin: 0px; padding: 0px; border: none; font-size: 16px; font-family: 宋体; line-height: 32px !important;">
+	<font face="宋体" style="margin: 0px; padding: 0px; font-size: 12pt;">　　各设区市科技局和平潭综合实验区经济发展局要高度重视科技型中小企业评价工作，充分利用线上线下相结合的方式加强政策解读和企业培训服务，在符合本地防疫要求的前提下，依托科技园区、众创空间、孵化器等科技型中小企业集聚区进行重点政策解读，采取务实有效措施推动本地区科技型中小企业创新发展。</font></p>
+<p align="right" class="MsoNormal" style="margin: 0px; padding: 0px; border: none; font-size: 16px; font-family: 宋体; line-height: 32px !important;">
+	<font face="宋体" style="margin: 0px; padding: 0px; font-size: 12pt;">　　福建省科学技术厅</font></p>
+<p align="right" class="MsoNormal" style="margin: 0px; padding: 0px; border: none; font-size: 16px; font-family: 宋体; line-height: 32px !important;">
+	<font face="宋体" style="margin: 0px; padding: 0px; font-size: 12pt;">　　2021年1月12日</font></p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 excel">
+											</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 xgxw">
+				<img src="https://www.fujiansme.com/statics/images/wap/tuoyuan.png" /><span>相关新闻</span>
+			</div>
+		</div>
+		<div class="row xw_item">
+			<div class="col-xs-12" onclick="location.href='http://www.fujiansme.com/index.php?m=content&c=index&a=show&catid=925&id=5024'">
+				<p>关于2020年度福建省“百佳农民合作社示范社”和“十佳农民合作社联合社”拟推荐名单的公示</p>
+				<span>2021-01-14</span>
+			</div>
+		</div>
+			</div>
+<script language="JavaScript" src="https://www.fujiansme.com/api.php?op=count&id=5035&modelid=32"></script>
+<script type="text/javascript" src="https://www.fujiansme.com/statics/js/wap/base.js"></script>
 <script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.3.2.js"></script>
-<script>
-    window.onFFCS_JBReady = function () {
-        FFCS_JB.app_window.showSearch('https://www.fujiansme.com/index.php?m=content&c=index&a=policy_lists&catid=11&dosubmit=1&title=','5',function(ret){
-            if('1'==ret){
-                //FFCS_JB.toast(' success');
-            }else {
-                //FFCS_JB.toast(' failure');
-            }
-        });
-    }
-
-    //ios-js
-    function setupWebViewJavascriptBridge(callback) {
-        if (window.WebViewJavascriptBridge) { return callback(WebViewJavascriptBridge); }
-        if (window.WVJBCallbacks) { return window.WVJBCallbacks.push(callback); }
-        window.WVJBCallbacks = [callback];
-        var WVJBIframe = document.createElement('iframe');
-        WVJBIframe.style.display = 'none';
-        WVJBIframe.src = 'https://__bridge_loaded__';
-        document.documentElement.appendChild(WVJBIframe);
-        setTimeout(function() { document.documentElement.removeChild(WVJBIframe) }, 0)
-    }
-
-    // ios-搜索框
-    function showSearch() {
-        setupWebViewJavascriptBridge (function (bridge) {
-            var param = {};
-            param.searchUrl = 'https://www.fujiansme.com/index.php?m=content&c=index&a=policy_lists&catid=11&dosubmit=1&title=';
-            param.type = 5;
-            bridge.callHandler('showSearch', param, function responseCallback(result) {})
-        })
-    }
+<script type="application/javascript">
+	window.onFFCS_JBReady = function () {
+		var url = window.location.href;
+		FFCS_JB.app_window.showShare(url,'福建省科学技术厅关于组织开展2021年科技型中小企业评价工作的通知','福建省科学技术厅关于组织开展2021年科技型中小企业评价工作的通知','',function(ret){
+			if('1'==ret){
+				// FFCS_JB.toast('success');
+			}else {
+				//FFCS_JB.toast('failure');
+			}
+		});
+	}
+	//ios-js
+	function setupWebViewJavascriptBridge(callback) {
+		if (window.WebViewJavascriptBridge) { return callback(WebViewJavascriptBridge); }
+		if (window.WVJBCallbacks) { return window.WVJBCallbacks.push(callback); }
+		window.WVJBCallbacks = [callback];
+		var WVJBIframe = document.createElement('iframe');
+		WVJBIframe.style.display = 'none';
+		WVJBIframe.src = 'https://__bridge_loaded__';
+		document.documentElement.appendChild(WVJBIframe);
+		setTimeout(function() { document.documentElement.removeChild(WVJBIframe) }, 0)
+	}
+	// ios-搜索框
+	function showShare() {
+		setupWebViewJavascriptBridge (function (bridge) {
+			var param = {};
+			var url = window.location.href;
+			param.shareUrl = url;
+			param.shareText = '福建省科学技术厅关于组织开展2021年科技型中小企业评价工作的通知';
+			param.shareContent = '福建省科学技术厅关于组织开展2021年科技型中小企业评价工作的通知';
+			bridge.callHandler('showShare', param, function responseCallback(result) {})
+		})
+	}
 	var ua = navigator.userAgent.toLowerCase();
 	if(ua.match(/MicroMessenger/i)=="micromessenger") {
 		wx.miniProgram.getEnv((res)=>{
-           if (!res.miniprogram) {
-               window.onload = showSearch();
-           }
-        })
+			if (!res.miniprogram) {
+				window.onload = showShare();
+			}
+		})
 	}else{
-		window.onload = showSearch();
+		window.onload = showShare();
 	}
-    $(function() {
-        FastClick.attach(document.body);
-    });
-    function changeColor(selector) {
-        if(selector.selectedIndex > 0) {
-            selector.style.color = '#ff7519';
-        } else {
-            selector.style.color = '#000';
-        }
-        var catid = $(selector).val();
-        if(catid){
-            get_ajax_data(catid);
-        }
-    }
-    function get_ajax_data(catid) {
-        get_data(10,1,catid);
-    }
-    var loading = false;
-    var count = 10;  //初始展示记录数
-    var total = "1176";  //总记录数
-    var loaded = false; //加载完成flag
-    var page = 1; //页码
-    if(total > count) {
-        $(document.body).infinite().on("infinite", function() {
-            if(loading | loaded) return;
-            loading = true;
-            var load_num = 10; //每次加载记录数
-            if(total - count < 10) {
-                load_num = total - count;
-            }
-            get_data(load_num);
-        });
-    }else{
-        $('.weui-loadmore').hide();
-    }
 
-    $("#zc_type").change(function () {
-        var catid = $("#zc_type").val();
-        get_data(10,1,catid);
-    });
-    $("#zc_level").change(function () {
-        var catid = $("#zc_level").val();
-        get_data(10,1,catid);
-    });
-    function get_data(load_num,is_form,catid) {
-        var is_catid = catid ? catid : "41";
-        page++;
-        if(is_form){
-            var url = "m=content&c=index&a=policy_lists&dosubmit=1&catid="+is_catid;
-        }else{
-            var url = "m=content&c=index&a=policy_lists&dosubmit=1&catid="+is_catid+"&page=" + page;
-        }
-        $.ajax({
-            type: "GET",
-            url: "index.php",
-            data: url,
-            dataType: 'json',
-            success: function(data) {
-                if (data.Code == 0) {
-                    var reslength = data.Data.length;
-                    var res = new Array();
-                    if (reslength > 0) {
-                        if(is_form){
-                            $("#info-list").html('');
-                        }
-                        for(var i=0; i<reslength; i++) {
-                            res = $.makeArray(data.Data[i]);
-                            $("#info-list").append('<a href="'+res[0].url+'" class="weui-media-box weui-media-box_appmsg show-loading">'+
-                                '<div class="weui-media-box_text">'+
-                                '<h4 class="weui-media-box__title">'+ res[0].title.substring(0,20) +'...</h4>'+
-                                '<p class="weui-media-box__desc">'+ res[0].description.substring(0,65) +'...</p>' +
-                                '</div>' +
-                                '</a>');
-                            res = new Array();
-                        }
-                        $('.weui-loadmore').html('<span class="weui-loadmore__tips">加载完成</span>');
-                    } else {
-                        if(is_form){
-                            $("#info-list").html('<a style="padding: 20px 140px;" href="javascript:void(0)" class="weui-media-box weui-media-box_appmsg show-loading">'+
-                                '<div class="weui-media-box_text">'+
-                                '<h4 class="weui-media-box__title">暂无数据</h4>'+
-                                '</div>' +
-                                '</a>');
-                        }else{
-                            $('.weui-loadmore').html('<span class="weui-loadmore__tips">加载完成</span>');
-                        }
-                    }
-                }
-                $('.weui-loadmore').hide();
-            }
-        });
-        loading = false;
-        count += load_num;
-    }
+	//判断微信里下载
+	</script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script>
+    var shareTitle = '福建省科学技术厅关于组织开展2021年科技型中小企业评价工作的通知';
+    var shareDesc = '福建省科学技术厅关于组织开展2021年科技型中小企业评价工作的通知';
+    var shareLink = window.location.href.split('#')[0];
+    var shareImgUrl = 'https://www.fujiansme.com/statics/images/weixin/share_logo.jpg';
+    var location_url = encodeURIComponent(window.location.href.split('#')[0]);
+    $.ajax({
+        type: "POST",
+        url: "index.php?m=weixin&c=jssdk&a=index",
+        data:{url:location_url},
+        dataType: 'json',
+        success: function(res) {
+            if (res.code == 1) {
+                if(res.data){
+                    console.log(res.data);
+                    //shareLink = decodeURIComponent(res.data.url);
+                    wx.config({
+                        debug: false,
+                        appId: res.data.appId,
+                        timestamp: res.data.timestamp,
+                        nonceStr: res.data.nonceStr,
+                        signature: res.data.signature,
+                        jsApiList: [
+                            // 所有要调用的 API 都要加到这个列表中
+                            'onMenuShareTimeline',
+                            'onMenuShareAppMessage',
+                            'onMenuShareQQ',
+                            'onMenuShareWeibo',
+                            'onMenuShareQZone'
+                        ]
+                    });
+                    wx.ready(function () {
+                        //分享给朋友
+                        wx.onMenuShareAppMessage({
+                            title: shareTitle,
+                            desc: shareDesc,
+                            link: shareLink,
+                            imgUrl: shareImgUrl,
+                            success: function (res) {
+                                shared(shareLink, "friend", shareGid);
+                            },
+                            fail: function (res) {
+                                alert(JSON.stringify(res));
+                            }
+                        });
+                        //分享到朋友圈
+                        wx.onMenuShareTimeline({
+                            title: shareTitle,
+                            desc: shareDesc,
+                            link: shareLink,
+                            imgUrl: shareImgUrl,
+                            success: function (res) {
+                                shared(shareLink, "Timeline", shareGid);
+                            },
+                            fail: function (res) {
+                                alert(JSON.stringify(res));
+                            }
+                        });
+                        //分享到QQ
+                        wx.onMenuShareQQ({
+                            title: shareTitle,
+                            desc: shareDesc,
+                            link: shareLink,
+                            imgUrl: shareImgUrl,
+                            success: function (res) {
+                                shared(shareLink, "QQ", shareGid);
+                            },
+                            fail: function (res) {
+                                alert(JSON.stringify(res));
+                            }
+                        });
+                        //分享到weibo
+                        wx.onMenuShareWeibo({
+                            title: shareTitle,
+                            desc: shareDesc,
+                            link: shareLink,
+                            imgUrl: shareImgUrl,
+                            success: function (res) {
+                                shared(shareLink, "Weibo", shareGid);
+                            },
+                            fail: function (res) {
+                                alert(JSON.stringify(res));
+                            }
+                        });
+                        //分享到QZone
+                        wx.onMenuShareQZone({
+                            title: shareTitle,
+                            desc: shareDesc,
+                            link: shareLink,
+                            imgUrl: shareImgUrl,
+                            success: function (res) {
+                                shared(shareLink, "QZone", shareGid);
+                            },
+                            fail: function (res) {
+                                alert(JSON.stringify(res));
+                            }
+                        });
+                    });
+                }
+            }
+        }
+    });
+
+</script><script src="https://www.fujiansme.com/statics/js/wap/appjs.js"></script>
+<script src="https://www.fujiansme.com/statics/js/wap/ScrollImg.js"></script>
 
+<script>
+//    window.onFFCS_JBReady = function () {
+//        FFCS_JB.app_window.hideNavBar(function(ret){
+//            if('1'==ret){
+//                // FFCS_JB.toast('success');
+//            }else {
+//                //FFCS_JB.toast('failure');
+//            }
+//        });
+//    }
+
+    //ios-js
+//    function setupWebViewJavascriptBridge(callback) {
+//        if (window.WebViewJavascriptBridge) { return callback(WebViewJavascriptBridge); }
+//        if (window.WVJBCallbacks) { return window.WVJBCallbacks.push(callback); }
+//        window.WVJBCallbacks = [callback];
+//        var WVJBIframe = document.createElement('iframe');
+//        WVJBIframe.style.display = 'none';
+//        WVJBIframe.src = 'https://__bridge_loaded__';
+//        document.documentElement.appendChild(WVJBIframe);
+//        setTimeout(function() { document.documentElement.removeChild(WVJBIframe) }, 0)
+//    }
+
+//    var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+//    // 返回按钮
+//    $('.btn_return').click(function(){
+//        if (isiOS) {
+//            setupWebViewJavascriptBridge (function (bridge) {
+//                bridge.callHandler('finishPage', function responseCallback(result) {})
+//            })
+//        } else {
+//            FFCS_JB.app_window.finishPage();
+//        }
+//    });
+//
+//    //隐藏ios app头部
+//    function hideNavBar() {
+//        setupWebViewJavascriptBridge (function (bridge) {
+//            bridge.callHandler('hideNavBar', function responseCallback(result) {})
+//        })
+//    }
+//    window.onload = hideNavBar();
+
+    $(function () {
+        var scrollImg = $.ScrollImg('.scroll ul');
+    });
 </script>
+
 </body>
 </html>

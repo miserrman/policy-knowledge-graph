@@ -17,6 +17,11 @@ FUJIAN_UNIFORM_POLICY_NET = 'https://www.fujiansme.com/index.php?m=content&c=ind
 
 
 def get_page(html):
+    """
+    得到政策网站的页数和每页文件的数量
+    :param html:
+    :return:
+    """
     total_object = re.search(r'total = \"\d+\"', html)
     count_object = re.search(r'count = \d+', html)
     if total_object and count_object:
@@ -24,6 +29,26 @@ def get_page(html):
         count = int(str(re.search('\d+', str(count_object.group())).group()))
     return total, count
 
+
+def load_clear_info(path):
+    """
+    下载政策网站具体的信息
+    :param path:
+    :return:
+    """
+    data = pd.read_csv(path, names=['depart_id', 'detail', 'title'])
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Mobile Safari/537.36'
+    }
+    for index, row in data.iterrows():
+        url = row['detail']
+        content = requests.get(url, headers=headers)
+        soup = BeautifulSoup(content.text)
+        title = soup.findAll(name='div', attrs={'class': 'col-xs-12 page-header'})
+        if title:
+            header = title[0].h1.string
+        data.iloc[index, 2] = header
+    data.to_csv(path, index=True)
 
 
 def load_html(url, params=None):
@@ -130,7 +155,6 @@ def create_policy_content_chart(policy_chart):
     new_data = pd.DataFrame(columns=col)
     data = pd.read_csv(policy_chart, names=['city', 'region', 'depart', 'policy_id', 'policy_title'])
     for index, row in data.iterrows():
-        print(index)
         content_url = FUJIAN_POLICY_CONTENT.replace("#", str(row['policy_id']))
         policy_content = get_request(content_url)
         if policy_content == None:
@@ -148,5 +172,6 @@ def create_policy_content_chart(policy_chart):
 
 
 if __name__ == '__main__':
-    result = load_html(FUJIAN_UNIFORM_POLICY_NET)
-    write_csv(result, 'data/policy_fujian.csv')
+    # result = load_html(FUJIAN_UNIFORM_POLICY_NET)
+    # write_csv(result, 'data/policy_fujian.csv')
+    load_clear_info('data/policy_fujian.csv')

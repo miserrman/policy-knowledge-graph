@@ -1,15 +1,19 @@
 import pandas as pd
 import numpy as np
 from py2neo import Graph, Node, Relationship
+from pyhanlp import HanLP
+import requests
 
 
-connection = Graph('http://localhost:7474', username='neo4j', password='123456')
-graph = connection.begin()
-node1 = Node('label', name='maiduojian', primary_key='name')
-node2 = Node('label', name='god', primary_key='name')
-relationship = Relationship(node1, 'is', node2)
-graph.create(node1)
-graph.create(node2)
-graph.create(relationship)
-print(graph)
-graph.commit()
+def dependency_relation(sentence):
+    relation = HanLP.parseDependency(sentence)
+    return relation
+
+
+if __name__ == "__main__":
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Mobile Safari/537.36'
+    }
+    t = requests.get('https://www.fujiansme.com/index.php?m=content&c=index&a=show&catid=925&id=5035', headers=headers)
+    fp = open('1.txt', 'w')
+    fp.write(t.text)
