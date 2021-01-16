@@ -16,49 +16,54 @@
 <body>	<div class="container">
 				<div class="row">
 			<div class="col-xs-12 page-header">
-				<h1>福建省科学技术厅关于组织开展2021年科技型中小企业评价工作的通知</h1>
+				<h1>省工信厅 人行福州中心支行：关于加快推进应收账款融资试点工作的通知</h1>
 			</div>
 		</div>
 		<div class="row subheader">
 			<div class="col-xs-12">
-				<span>admin</span>
-				<span>2021-01-15</span>
+				<span>福建省中小企业公共服务平台</span>
+				<span>2019-01-18</span>
 				<div class="right-div">
 					<img src="https://www.fujiansme.com/statics/images/wap/eye.png" />
 					<!--<span id="hits"></span>-->
-					<span>2</span>
+					<span>1404</span>
 				</div>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-xs-12 title_zhc">
-				<span>福建省科学技术厅关于组织开展2021年科技型中小企业评价工作的通知</span>
+				<span>省工信厅 人行福州中心支行：关于加快推进应收账款融资试点工作的通知</span>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-xs-12 content_zhc">
-				<p class="MsoNormal" style="margin: 0px; padding: 0px; border: none; font-size: 16px; font-family: 宋体; line-height: 32px !important;">
-	<font face="宋体" style="margin: 0px; padding: 0px; font-size: 12pt;">各设区市科技局、平潭综合实验区经济发展局：</font></p>
-<p class="MsoNormal" style="margin: 0px; padding: 0px; border: none; font-size: 16px; font-family: 宋体; line-height: 32px !important;">
-	<font face="宋体" style="margin: 0px; padding: 0px; font-size: 12pt;">　　根据科技部火炬中心《关于开展2021年科技型中小企业评价服务工作的通知》（国科火字〔2021〕11号）的有关要求，现就我省组织开展2021年科技型中小企业评价工作的有关事项通知如下：</font></p>
-<p class="MsoNormal" style="margin: 0px; padding: 0px; border: none; font-size: 16px; font-family: 宋体; line-height: 32px !important;">
-	<font face="宋体" style="margin: 0px; padding: 0px; font-size: 12pt;">　　一、网上办理评价工作</font></p>
-<p class="MsoNormal" style="margin: 0px; padding: 0px; border: none; font-size: 16px; font-family: 宋体; line-height: 32px !important;">
-	<font face="宋体" style="margin: 0px; padding: 0px; font-size: 12pt;">　　符合条件的企业可于10月20日前登录科技部政务服务平台（网址：fuwu.most.gov.cn，以下简称政务服务平台）注册单位用户（法人）账号、选择办理科技型中小企业评价、提交《科技型中小企业信息表》，自主进行科技型中小企业评价。企业获得的2021年度科技型中小企业入库登记编号，可通过政务服务平台进行查询。</font></p>
-<p class="MsoNormal" style="margin: 0px; padding: 0px; border: none; font-size: 16px; font-family: 宋体; line-height: 32px !important;">
-	<font face="宋体" style="margin: 0px; padding: 0px; font-size: 12pt;">　　二、及时在线审查</font></p>
-<p class="MsoNormal" style="margin: 0px; padding: 0px; border: none; font-size: 16px; font-family: 宋体; line-height: 32px !important;">
-	<font face="宋体" style="margin: 0px; padding: 0px; font-size: 12pt;">　　评价工作机构应在每月末最后一个工作日完成本月属地企业提交的《信息表》审查提交工作。我厅业务管理部门将在线对评价工作机构审查通过的《信息表》进行核对，每月初对符合要求的《信息表》进行汇总，形成拟入库企业名单，并按评价工作流程进行公示，公示无异议的赋予科技型中小企业入库登记编号并公告。本年度拟入库企业公示文件发布工作将于10月31日前结束。各设区市科技局和平潭综合实验区经济发展局应督促评价工作机构及时在线进行企业评价信息形式审查工作。</font></p>
-<p class="MsoNormal" style="margin: 0px; padding: 0px; border: none; font-size: 16px; font-family: 宋体; line-height: 32px !important;">
-	<font face="宋体" style="margin: 0px; padding: 0px; font-size: 12pt;">　　三、加强企业诚信体系建设</font></p>
-<p class="MsoNormal" style="margin: 0px; padding: 0px; border: none; font-size: 16px; font-family: 宋体; line-height: 32px !important;">
-	<font face="宋体" style="margin: 0px; padding: 0px; font-size: 12pt;">　　评价工作机构应积极引导企业履行评价工作主体责任，建立健全研发支出辅助账，填报的《信息表》应与企业各类信息、账目数字相符。对不符合科技型中小企业条件、存在弄虚作假行为、不能提供有效证明材料或抽查中不提供相关材料的企业，评价工作机构还应及时提交省级科技管理部门撤销或由省级科技管理部门直接撤销登记编号，并在科技型中小企业信息服务平台上公告。被撤销登记编号的企业当年不得再次参与评价。</font></p>
-<p class="MsoNormal" style="margin: 0px; padding: 0px; border: none; font-size: 16px; font-family: 宋体; line-height: 32px !important;">
-	<font face="宋体" style="margin: 0px; padding: 0px; font-size: 12pt;">　　各设区市科技局和平潭综合实验区经济发展局要高度重视科技型中小企业评价工作，充分利用线上线下相结合的方式加强政策解读和企业培训服务，在符合本地防疫要求的前提下，依托科技园区、众创空间、孵化器等科技型中小企业集聚区进行重点政策解读，采取务实有效措施推动本地区科技型中小企业创新发展。</font></p>
-<p align="right" class="MsoNormal" style="margin: 0px; padding: 0px; border: none; font-size: 16px; font-family: 宋体; line-height: 32px !important;">
-	<font face="宋体" style="margin: 0px; padding: 0px; font-size: 12pt;">　　福建省科学技术厅</font></p>
-<p align="right" class="MsoNormal" style="margin: 0px; padding: 0px; border: none; font-size: 16px; font-family: 宋体; line-height: 32px !important;">
-	<font face="宋体" style="margin: 0px; padding: 0px; font-size: 12pt;">　　2021年1月12日</font></p>
+				<div style="text-align: center;"><span style="font-family: 微软雅黑; font-size: 16px;">闽工信中小〔2019〕9号</span></div>
+<div><span style="font-size:16px;"><span style="font-family:微软雅黑;">各有关设区市工信局、福州市金融监管局、平潭综合实验区经发局，人民银行省内各设区市中心支行、平潭综合实验区支行、福州辖内各县（市、区）支行：</span></span></div>
+<div><span style="font-size:16px;"><span style="font-family:微软雅黑;">　　为贯彻落实《福建省人民政府关于进一步支持全省中小企业发展十条措施的通知》（闽政〔2018〕17号）精神，实施应收账款等新型融资模式，拓宽中小微企业融资渠道，现就加快推进应收账款融资试点工作通知如下：</span></span></div>
+<div><span style="font-size:16px;"><span style="font-family:微软雅黑;">　　一、工作目标及任务</span></span></div>
+<div><span style="font-size:16px;"><span style="font-family:微软雅黑;">　　为推动大企业和供应链核心企业支持中小微企业实现应收账款融资，盘活中小微企业存量资产，提高中小微企业融资效率，构建供应链上下游企业互信互惠、大中小企业协同配套发展的良好生态环境，开展金融机构、大企业和供应链核心企业支持中小企业应收账款融资试点工作。对通过人民银行征信中心应收账款融资服务平台在线确认，帮助中小微企业实现应收账款贷款融资的大企业和供应链核心企业，按照中小微企业获得融资金额的一定比例给予奖励。</span></span></div>
+<div><span style="font-size:16px;"><span style="font-family:微软雅黑;">　　　二、工作方式</span></span></div>
+<div><span style="font-size:16px;"><span style="font-family:微软雅黑;">　　以设区市（含平潭综合实验区，下同）为主体，各设区市工信部门在前期摸底征集企业名单的基础上自行确定1家（含）以上本省的制造业大企业或供应链核心企业，主动对接当地人民银行和中征系统，加强沟通协调，主动服务指导，自主开展应收账款融资试点工作。省属大企业和供应链核心企业应收账款融资试点工作依托所在地设区市主管部门统一实施。省内各级人民银行要主动加强与主管部门协作，推动辖内应收账款融资试点工作取得进展，引导金融机构将有关业务信息第一时间报送人民银行征信中心应收账款融资服务平台。</span></span></div>
+<div><span style="font-size:16px;"><span style="font-family:微软雅黑;">　　三、奖励资金</span></span></div>
+<div><span style="font-size:16px;"><span style="font-family:微软雅黑;">　　2019年，省工信厅在工业和信息化专项资金预算中安排2000万元应收账款融资试点奖励资金，将按因素法切块至各设区市。</span></span></div>
+<div><span style="font-size:16px;"><span style="font-family:微软雅黑;">　　（一）奖励对象及标准。按制造业大企业和供应链核心企业2018年1月1日至2019年12月31日期间通过人民银行征信中心应收账款融资服务平台在线确认，并帮助福建省中小微企业实现应收账款贷款融资年化金额不超过1%的比例，对大企业和供应链核心企业给予奖励，单家企业奖励资金最高不超过200万元。</span></span></div>
+<div><span style="font-size:16px;"><span style="font-family:微软雅黑;">　　　（二）绩效任务。奖励资金切块时，省工信厅将同时下达应收账款融资试点工作年度绩效目标和任务。各设区市可通过增加&ldquo;支持制造业大企业或供应链核心企业家数&rdquo;方式提升该项工作完成效果，以完成年度绩效目标和任务，确保用实用好奖励资金。</span></span></div>
+<div><span style="font-size:16px;"><span style="font-family:微软雅黑;">　　　　四、其他要求</span></span></div>
+<div><span style="font-size:16px;"><span style="font-family:微软雅黑;">　　各设区市主管部门、人民银行要高度重视应收账款融资试点工作，认真研究，强化配合，迅速推进。主管部门应于每季度结束后10日内，将上季度应收账款融资试点工作推进情况及表格（见附件）报送省工信厅，省工信厅将视情况对各地试点工作推进情况进行通报。</span></span><br />
+&nbsp;</div>
+<div><span style="font-size:16px;"><span style="font-family:微软雅黑;">　　联系人及联系方式：</span></span></div>
+<div><span style="font-size:16px;"><span style="font-family:微软雅黑;">　　省工信厅中小企业处&nbsp; 周 艳 0591-87833634</span></span></div>
+<div><span style="font-size:16px;"><span style="font-family:微软雅黑;">　　人行福州中心支行货币信贷处&nbsp; 许伟河 0591-88010921</span></span></div>
+<div><span style="font-size:16px;"><span style="font-family:微软雅黑;">　　附件：应收账款融资试点工作情况表</span></span></div>
+<div>&nbsp;</div>
+<div style="text-align: right;"><span style="font-size:16px;"><span style="font-family:微软雅黑;">　　福建省工业和信息化厅</span></span></div>
+<div style="text-align: right;"><span style="font-size:16px;"><span style="font-family:微软雅黑;">　　中国人民银行福州中心支行</span></span></div>
+<div style="text-align: right;"><span style="font-size:16px;"><span style="font-family:微软雅黑;">　　 2019年1月14日</span></span></div>
+<div>&nbsp;</div>
+<div><span style="font-size:16px;"><span style="font-family:微软雅黑;">　（此件主动公开）</span></span></div>
+<div>&nbsp;</div>
+<div><span style="font-size:16px;"><span style="font-family:微软雅黑;">相关附件：</span></span></div>
+<div><a href="http://www.fujiansme.com/uploadfile/2019/0118/20190118025102182.doc"><span style="font-size:16px;"><span style="font-family:微软雅黑;">附件 应收账款融资试点工作情况表.doc</span></span></a></div>
 			</div>
 		</div>
 		<div class="row">
@@ -71,19 +76,19 @@
 			</div>
 		</div>
 		<div class="row xw_item">
-			<div class="col-xs-12" onclick="location.href='http://www.fujiansme.com/index.php?m=content&c=index&a=show&catid=925&id=5024'">
-				<p>关于2020年度福建省“百佳农民合作社示范社”和“十佳农民合作社联合社”拟推荐名单的公示</p>
-				<span>2021-01-14</span>
+			<div class="col-xs-12" onclick="location.href='http://www.fujiansme.com/index.php?m=content&c=index&a=show&catid=699&id=2372'">
+				<p>省工信厅 省财政厅：关于公布2018年福建省小型微型企业创业创新示范基地名单的通知</p>
+				<span>2018-12-27</span>
 			</div>
 		</div>
 			</div>
-<script language="JavaScript" src="https://www.fujiansme.com/api.php?op=count&id=5035&modelid=32"></script>
+<script language="JavaScript" src="https://www.fujiansme.com/api.php?op=count&id=2446&modelid=32"></script>
 <script type="text/javascript" src="https://www.fujiansme.com/statics/js/wap/base.js"></script>
 <script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.3.2.js"></script>
 <script type="application/javascript">
 	window.onFFCS_JBReady = function () {
 		var url = window.location.href;
-		FFCS_JB.app_window.showShare(url,'福建省科学技术厅关于组织开展2021年科技型中小企业评价工作的通知','福建省科学技术厅关于组织开展2021年科技型中小企业评价工作的通知','',function(ret){
+		FFCS_JB.app_window.showShare(url,'省工信厅 人行福州中心支行：关于加快推进应收账款融资试点工作的通知','闽工信中小〔2019〕9号各有关设区市工信局、福州市金融监管局、平潭综合实验区经发局，人民银行省内各设区市中心支行、平潭综合实验区支行   ','',function(ret){
 			if('1'==ret){
 				// FFCS_JB.toast('success');
 			}else {
@@ -108,8 +113,8 @@
 			var param = {};
 			var url = window.location.href;
 			param.shareUrl = url;
-			param.shareText = '福建省科学技术厅关于组织开展2021年科技型中小企业评价工作的通知';
-			param.shareContent = '福建省科学技术厅关于组织开展2021年科技型中小企业评价工作的通知';
+			param.shareText = '省工信厅 人行福州中心支行：关于加快推进应收账款融资试点工作的通知';
+			param.shareContent = '闽工信中小〔2019〕9号各有关设区市工信局、福州市金融监管局、平潭综合实验区经发局，人民银行省内各设区市中心支行、平潭综合实验区支行   ';
 			bridge.callHandler('showShare', param, function responseCallback(result) {})
 		})
 	}
@@ -128,8 +133,8 @@
 	</script>
 <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 <script>
-    var shareTitle = '福建省科学技术厅关于组织开展2021年科技型中小企业评价工作的通知';
-    var shareDesc = '福建省科学技术厅关于组织开展2021年科技型中小企业评价工作的通知';
+    var shareTitle = '省工信厅 人行福州中心支行：关于加快推进应收账款融资试点工作的通知';
+    var shareDesc = '闽工信中小〔2019〕9号各有关设区市工信局、福州市金融监管局、平潭综合实验区经发局，人民银行省内各设区市中心支行、平潭综合实验区支行   ';
     var shareLink = window.location.href.split('#')[0];
     var shareImgUrl = 'https://www.fujiansme.com/statics/images/weixin/share_logo.jpg';
     var location_url = encodeURIComponent(window.location.href.split('#')[0]);

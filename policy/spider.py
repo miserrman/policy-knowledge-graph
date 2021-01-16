@@ -6,6 +6,7 @@ import codecs
 from lxml import etree
 from bs4 import BeautifulSoup
 import re
+import policy_util
 
 
 FUJIAN_CITY = 'http://api.zwfw.fujian.gov.cn:731/cms-business/otherService/getCityList'
@@ -14,6 +15,19 @@ FUJIAN_DEPART = 'http://api.zwfw.fujian.gov.cn:731/cms-business/listingService/g
 FUJIAN_POLICY = 'http://api.zwfw.fujian.gov.cn:731/cms-business/listingService/getQzqdInfoList?stype=&deptOrSiteunid=#&subname=&pageSize=10&pageNum=1'
 FUJIAN_POLICY_CONTENT = 'http://api.zwfw.fujian.gov.cn:731/cms-business/listingDetail/getPowerDetail?powerunid=#&type=1'
 FUJIAN_UNIFORM_POLICY_NET = 'https://www.fujiansme.com/index.php?m=content&c=index&a=policy_lists&catid=41&dosubmit=1&subcatid=#&start_time=&end_time=&title='
+headers = {
+        'User-Agent': 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Mobile Safari/537.36'
+}
+
+
+def get_text(path, write_path):
+    data = pd.read_csv(path, header=0)
+    with open(write_path, 'w', encoding='utf-8') as fp:
+        lines = []
+        for index, row in data.iterrows():
+            lines.append(row['content'])
+        fp.writelines(lines)
+
 
 
 def get_page(html):
@@ -37,9 +51,6 @@ def load_clear_info(path):
     :return:
     """
     data = pd.read_csv(path, names=['depart_id', 'detail', 'title'])
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Mobile Safari/537.36'
-    }
     for index, row in data.iterrows():
         url = row['detail']
         content = requests.get(url, headers=headers)
@@ -51,10 +62,43 @@ def load_clear_info(path):
     data.to_csv(path, index=True)
 
 
+def load_article_content(path, write_path):
+    data = pd.read_csv(path, header=0)
+    result = []
+    with open(write_path, 'w', encoding='utf-8') as fp:
+        for index, row in data.iterrows():
+            url = row['detail']
+            try:
+                r = requests.get(url, headers=headers)
+                text = r.text
+                soup = BeautifulSoup(text)
+                content_list = soup.findAll(name='span', attrs={'style': 'font-family:微软雅黑;'})
+                res = ""
+                if not content_list:
+                    paras = soup.findAll(name='p')
+                    for para in paras:
+                        res += para.string if para.string else ''
+                else:
+                    for content in content_list:
+                        res += content.string if content and content.string else ''
+                res = re.sub('<.+>', '', res)
+                d = {
+                    'title': row['title'],
+                    'content': res if res else '空'
+                }
+                result.append(d)
+            except requests.exceptions.ConnectionError as e:
+                d = {
+                    'title': row['title'],
+                    'content': '空'
+                }
+                result.append(d)
+            print(d)
+    return result
+
+
+
 def load_html(url, params=None):
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Mobile Safari/537.36'
-    }
     department_value = [i for i in range(699, 715)]
     department_value += [731, 741, 925]
     result = []
@@ -90,9 +134,6 @@ def load_html(url, params=None):
 
 
 def get_request(url, params=None):
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Mobile Safari/537.36'
-    }
     response = requests.get(url, params=params, headers=headers)
     content = response.content.decode('utf-8')
     print(content)
@@ -172,6 +213,9 @@ def create_policy_content_chart(policy_chart):
 
 
 if __name__ == '__main__':
-    # result = load_html(FUJIAN_UNIFORM_POLICY_NET)
-    # write_csv(result, 'data/policy_fujian.csv')
-    load_clear_info('data/policy_fujian.csv')
+    # # result = load_html(FUJIAN_UNIFORM_POLICY_NET)
+    # # write_csv(result, 'data/policy_fujian.csv')
+    # load_clear_info('data/policy_fujian.csv')
+    # result = load_article_content('data/policy_fujian.csv', 'data/policy_fujian_content.csv.txt')
+    # policy_util.write_csv(result, 'data/policy_fujian_content.csv')
+    get_text('data/policy_fujian_content.csv', 'data/policy_fujian_content.txt')

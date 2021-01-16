@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>详情</title>
+    <link rel="stylesheet" href="https://www.fujiansme.com/statics/css/wap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.fujiansme.com/statics/css/wap/base-bootstrap.css">
+    <link href="https://www.fujiansme.com/statics/css/wap/style.css?v=1" rel="stylesheet" />
+    <script src="https://www.fujiansme.com/statics/js/jquery-3.3.1.min.js"></script>
+    <script src="https://www.fujiansme.com/statics/js/jquery.SuperSlide.2.1.1.js"></script>
+    <script src="https://www.fujiansme.com/statics/js/wap/bootstrap.min.js"></script>
+    <script src="https://www.fujiansme.com/statics/js/wap/base.js"></script>
+</head>
+<body>	<div class="container">
+				<div class="row">
+			<div class="col-xs-12 page-header">
+				<h1>省工信厅 人行福州中心支行：关于加快推进应收账款融资试点工作的通知</h1>
+			</div>
+		</div>
+		<div class="row subheader">
+			<div class="col-xs-12">
+				<span>福建省中小企业公共服务平台</span>
+				<span>2019-01-18</span>
+				<div class="right-div">
+					<img src="https://www.fujiansme.com/statics/images/wap/eye.png" />
+					<!--<span id="hits"></span>-->
+					<span>1404</span>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 title_zhc">
+				<span>省工信厅 人行福州中心支行：关于加快推进应收账款融资试点工作的通知</span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 content_zhc">
+				<div style="text-align: center;"><span style="font-family: 微软雅黑; font-size: 16px;">闽工信中小〔2019〕9号</span></div>
+<div><span style="font-size:16px;"><span style="font-family:微软雅黑;">各有关设区市工信局、福州市金融监管局、平潭综合实验区经发局，人民银行省内各设区市中心支行、平潭综合实验区支行、福州辖内各县（市、区）支行：</span></span></div>
+<div><span style="font-size:16px;"><span style="font-family:微软雅黑;">　　为贯彻落实《福建省人民政府关于进一步支持全省中小企业发展十条措施的通知》（闽政〔2018〕17号）精神，实施应收账款等新型融资模式，拓宽中小微企业融资渠道，现就加快推进应收账款融资试点工作通知如下：</span></span></div>
+<div><span style="font-size:16px;"><span style="font-family:微软雅黑;">　　一、工作目标及任务</span></span></div>
+<div><span style="font-size:16px;"><span style="font-family:微软雅黑;">　　为推动大企业和供应链核心企业支持中小微企业实现应收账款融资，盘活中小微企业存量资产，提高中小微企业融资效率，构建供应链上下游企业互信互惠、大中小企业协同配套发展的良好生态环境，开展金融机构、大企业和供应链核心企业支持中小企业应收账款融资试点工作。对通过人民银行征信中心应收账款融资服务平台在线确认，帮助中小微企业实现应收账款贷款融资的大企业和供应链核心企业，按照中小微企业获得融资金额的一定比例给予奖励。</span></span></div>
+<div><span style="font-size:16px;"><span style="font-family:微软雅黑;">　　　二、工作方式</span></span></div>
+<div><span style="font-size:16px;"><span style="font-family:微软雅黑;">　　以设区市（含平潭综合实验区，下同）为主体，各设区市工信部门在前期摸底征集企业名单的基础上自行确定1家（含）以上本省的制造业大企业或供应链核心企业，主动对接当地人民银行和中征系统，加强沟通协调，主动服务指导，自主开展应收账款融资试点工作。省属大企业和供应链核心企业应收账款融资试点工作依托所在地设区市主管部门统一实施。省内各级人民银行要主动加强与主管部门协作，推动辖内应收账款融资试点工作取得进展，引导金融机构将有关业务信息第一时间报送人民银行征信中心应收账款融资服务平台。</span></span></div>
+<div><span style="font-size:16px;"><span style="font-family:微软雅黑;">　　三、奖励资金</span></span></div>
+<div><span style="font-size:16px;"><span style="font-family:微软雅黑;">　　2019年，省工信厅在工业和信息化专项资金预算中安排2000万元应收账款融资试点奖励资金，将按因素法切块至各设区市。</span></span></div>
+<div><span style="font-size:16px;"><span style="font-family:微软雅黑;">　　（一）奖励对象及标准。按制造业大企业和供应链核心企业2018年1月1日至2019年12月31日期间通过人民银行征信中心应收账款融资服务平台在线确认，并帮助福建省中小微企业实现应收账款贷款融资年化金额不超过1%的比例，对大企业和供应链核心企业给予奖励，单家企业奖励资金最高不超过200万元。</span></span></div>
+<div><span style="font-size:16px;"><span style="font-family:微软雅黑;">　　　（二）绩效任务。奖励资金切块时，省工信厅将同时下达应收账款融资试点工作年度绩效目标和任务。各设区市可通过增加&ldquo;支持制造业大企业或供应链核心企业家数&rdquo;方式提升该项工作完成效果，以完成年度绩效目标和任务，确保用实用好奖励资金。</span></span></div>
+<div><span style="font-size:16px;"><span style="font-family:微软雅黑;">　　　　四、其他要求</span></span></div>
+<div><span style="font-size:16px;"><span style="font-family:微软雅黑;">　　各设区市主管部门、人民银行要高度重视应收账款融资试点工作，认真研究，强化配合，迅速推进。主管部门应于每季度结束后10日内，将上季度应收账款融资试点工作推进情况及表格（见附件）报送省工信厅，省工信厅将视情况对各地试点工作推进情况进行通报。</span></span><br />
+&nbsp;</div>
+<div><span style="font-size:16px;"><span style="font-family:微软雅黑;">　　联系人及联系方式：</span></span></div>
+<div><span style="font-size:16px;"><span style="font-family:微软雅黑;">　　省工信厅中小企业处&nbsp; 周 艳 0591-87833634</span></span></div>
+<div><span style="font-size:16px;"><span style="font-family:微软雅黑;">　　人行福州中心支行货币信贷处&nbsp; 许伟河 0591-88010921</span></span></div>
+<div><span style="font-size:16px;"><span style="font-family:微软雅黑;">　　附件：应收账款融资试点工作情况表</span></span></div>
+<div>&nbsp;</div>
+<div style="text-align: right;"><span style="font-size:16px;"><span style="font-family:微软雅黑;">　　福建省工业和信息化厅</span></span></div>
+<div style="text-align: right;"><span style="font-size:16px;"><span style="font-family:微软雅黑;">　　中国人民银行福州中心支行</span></span></div>
+<div style="text-align: right;"><span style="font-size:16px;"><span style="font-family:微软雅黑;">　　 2019年1月14日</span></span></div>
+<div>&nbsp;</div>
+<div><span style="font-size:16px;"><span style="font-family:微软雅黑;">　（此件主动公开）</span></span></div>
+<div>&nbsp;</div>
+<div><span style="font-size:16px;"><span style="font-family:微软雅黑;">相关附件：</span></span></div>
+<div><a href="http://www.fujiansme.com/uploadfile/2019/0118/20190118025102182.doc"><span style="font-size:16px;"><span style="font-family:微软雅黑;">附件 应收账款融资试点工作情况表.doc</span></span></a></div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 excel">
+											</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 xgxw">
+				<img src="https://www.fujiansme.com/statics/images/wap/tuoyuan.png" /><span>相关新闻</span>
+			</div>
+		</div>
+		<div class="row xw_item">
+			<div class="col-xs-12" onclick="location.href='http://www.fujiansme.com/index.php?m=content&c=index&a=show&catid=699&id=2372'">
+				<p>省工信厅 省财政厅：关于公布2018年福建省小型微型企业创业创新示范基地名单的通知</p>
+				<span>2018-12-27</span>
+			</div>
+		</div>
+			</div>
+<script language="JavaScript" src="https://www.fujiansme.com/api.php?op=count&id=2446&modelid=32"></script>
+<script type="text/javascript" src="https://www.fujiansme.com/statics/js/wap/base.js"></script>
+<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.3.2.js"></script>
+<script type="application/javascript">
+	window.onFFCS_JBReady = function () {
+		var url = window.location.href;
+		FFCS_JB.app_window.showShare(url,'省工信厅 人行福州中心支行：关于加快推进应收账款融资试点工作的通知','闽工信中小〔2019〕9号各有关设区市工信局、福州市金融监管局、平潭综合实验区经发局，人民银行省内各设区市中心支行、平潭综合实验区支行   ','',function(ret){
+			if('1'==ret){
+				// FFCS_JB.toast('success');
+			}else {
+				//FFCS_JB.toast('failure');
+			}
+		});
+	}
+	//ios-js
+	function setupWebViewJavascriptBridge(callback) {
+		if (window.WebViewJavascriptBridge) { return callback(WebViewJavascriptBridge); }
+		if (window.WVJBCallbacks) { return window.WVJBCallbacks.push(callback); }
+		window.WVJBCallbacks = [callback];
+		var WVJBIframe = document.createElement('iframe');
+		WVJBIframe.style.display = 'none';
+		WVJBIframe.src = 'https://__bridge_loaded__';
+		document.documentElement.appendChild(WVJBIframe);
+		setTimeout(function() { document.documentElement.removeChild(WVJBIframe) }, 0)
+	}
+	// ios-搜索框
+	function showShare() {
+		setupWebViewJavascriptBridge (function (bridge) {
+			var param = {};
+			var url = window.location.href;
+			param.shareUrl = url;
+			param.shareText = '省工信厅 人行福州中心支行：关于加快推进应收账款融资试点工作的通知';
+			param.shareContent = '闽工信中小〔2019〕9号各有关设区市工信局、福州市金融监管局、平潭综合实验区经发局，人民银行省内各设区市中心支行、平潭综合实验区支行   ';
+			bridge.callHandler('showShare', param, function responseCallback(result) {})
+		})
+	}
+	var ua = navigator.userAgent.toLowerCase();
+	if(ua.match(/MicroMessenger/i)=="micromessenger") {
+		wx.miniProgram.getEnv((res)=>{
+			if (!res.miniprogram) {
+				window.onload = showShare();
+			}
+		})
+	}else{
+		window.onload = showShare();
+	}
+
+	//判断微信里下载
+	</script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script>
+    var shareTitle = '省工信厅 人行福州中心支行：关于加快推进应收账款融资试点工作的通知';
+    var shareDesc = '闽工信中小〔2019〕9号各有关设区市工信局、福州市金融监管局、平潭综合实验区经发局，人民银行省内各设区市中心支行、平潭综合实验区支行   ';
+    var shareLink = window.location.href.split('#')[0];
+    var shareImgUrl = 'https://www.fujiansme.com/statics/images/weixin/share_logo.jpg';
+    var location_url = encodeURIComponent(window.location.href.split('#')[0]);
+    $.ajax({
+        type: "POST",
+        url: "index.php?m=weixin&c=jssdk&a=index",
+        data:{url:location_url},
+        dataType: 'json',
+        success: function(res) {
+            if (res.code == 1) {
+                if(res.data){
+                    console.log(res.data);
+                    //shareLink = decodeURIComponent(res.data.url);
+                    wx.config({
+                        debug: false,
+                        appId: res.data.appId,
+                        timestamp: res.data.timestamp,
+                        nonceStr: res.data.nonceStr,
+                        signature: res.data.signature,
+                        jsApiList: [
+                            // 所有要调用的 API 都要加到这个列表中
+                            'onMenuShareTimeline',
+                            'onMenuShareAppMessage',
+                            'onMenuShareQQ',
+                            'onMenuShareWeibo',
+                            'onMenuShareQZone'
+                        ]
+                    });
+                    wx.ready(function () {
+                        //分享给朋友
+                        wx.onMenuShareAppMessage({
+                            title: shareTitle,
+                            desc: shareDesc,
+                            link: shareLink,
+                            imgUrl: shareImgUrl,
+                            success: function (res) {
+                                shared(shareLink, "friend", shareGid);
+                            },
+                            fail: function (res) {
+                                alert(JSON.stringify(res));
+                            }
+                        });
+                        //分享到朋友圈
+                        wx.onMenuShareTimeline({
+                            title: shareTitle,
+                            desc: shareDesc,
+                            link: shareLink,
+                            imgUrl: shareImgUrl,
+                            success: function (res) {
+                                shared(shareLink, "Timeline", shareGid);
+                            },
+                            fail: function (res) {
+                                alert(JSON.stringify(res));
+                            }
+                        });
+                        //分享到QQ
+                        wx.onMenuShareQQ({
+                            title: shareTitle,
+                            desc: shareDesc,
+                            link: shareLink,
+                            imgUrl: shareImgUrl,
+                            success: function (res) {
+                                shared(shareLink, "QQ", shareGid);
+                            },
+                            fail: function (res) {
+                                alert(JSON.stringify(res));
+                            }
+                        });
+                        //分享到weibo
+                        wx.onMenuShareWeibo({
+                            title: shareTitle,
+                            desc: shareDesc,
+                            link: shareLink,
+                            imgUrl: shareImgUrl,
+                            success: function (res) {
+                                shared(shareLink, "Weibo", shareGid);
+                            },
+                            fail: function (res) {
+                                alert(JSON.stringify(res));
+                            }
+                        });
+                        //分享到QZone
+                        wx.onMenuShareQZone({
+                            title: shareTitle,
+                            desc: shareDesc,
+                            link: shareLink,
+                            imgUrl: shareImgUrl,
+                            success: function (res) {
+                                shared(shareLink, "QZone", shareGid);
+                            },
+                            fail: function (res) {
+                                alert(JSON.stringify(res));
+                            }
+                        });
+                    });
+                }
+            }
+        }
+    });
+
+</script><script src="https://www.fujiansme.com/statics/js/wap/appjs.js"></script>
+<script src="https://www.fujiansme.com/statics/js/wap/ScrollImg.js"></script>
+
+<script>
+//    window.onFFCS_JBReady = function () {
+//        FFCS_JB.app_window.hideNavBar(function(ret){
+//            if('1'==ret){
+//                // FFCS_JB.toast('success');
+//            }else {
+//                //FFCS_JB.toast('failure');
+//            }
+//        });
+//    }
+
+    //ios-js
+//    function setupWebViewJavascriptBridge(callback) {
+//        if (window.WebViewJavascriptBridge) { return callback(WebViewJavascriptBridge); }
+//        if (window.WVJBCallbacks) { return window.WVJBCallbacks.push(callback); }
+//        window.WVJBCallbacks = [callback];
+//        var WVJBIframe = document.createElement('iframe');
+//        WVJBIframe.style.display = 'none';
+//        WVJBIframe.src = 'https://__bridge_loaded__';
+//        document.documentElement.appendChild(WVJBIframe);
+//        setTimeout(function() { document.documentElement.removeChild(WVJBIframe) }, 0)
+//    }
+
+//    var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+//    // 返回按钮
+//    $('.btn_return').click(function(){
+//        if (isiOS) {
+//            setupWebViewJavascriptBridge (function (bridge) {
+//                bridge.callHandler('finishPage', function responseCallback(result) {})
+//            })
+//        } else {
+//            FFCS_JB.app_window.finishPage();
+//        }
+//    });
+//
+//    //隐藏ios app头部
+//    function hideNavBar() {
+//        setupWebViewJavascriptBridge (function (bridge) {
+//            bridge.callHandler('hideNavBar', function responseCallback(result) {})
+//        })
+//    }
+//    window.onload = hideNavBar();
+
+    $(function () {
+        var scrollImg = $.ScrollImg('.scroll ul');
+    });
+</script>
+
+</body>
+</html>
