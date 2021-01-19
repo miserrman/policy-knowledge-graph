@@ -1,290 +1,112 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>����</title>
-    <link rel="stylesheet" href="https://www.fujiansme.com/statics/css/wap/bootstrap.min.css">
-    <link rel="stylesheet" href="https://www.fujiansme.com/statics/css/wap/base-bootstrap.css">
-    <link href="https://www.fujiansme.com/statics/css/wap/style.css?v=1" rel="stylesheet" />
-    <script src="https://www.fujiansme.com/statics/js/jquery-3.3.1.min.js"></script>
-    <script src="https://www.fujiansme.com/statics/js/jquery.SuperSlide.2.1.1.js"></script>
-    <script src="https://www.fujiansme.com/statics/js/wap/bootstrap.min.js"></script>
-    <script src="https://www.fujiansme.com/statics/js/wap/base.js"></script>
-</head>
-<body>	<div class="container">
-				<div class="row">
-			<div class="col-xs-12 page-header">
-				<h1>ʡ������ ���и�������֧�У����ڼӿ��ƽ�Ӧ���˿������Ե㹤����֪ͨ</h1>
-			</div>
-		</div>
-		<div class="row subheader">
-			<div class="col-xs-12">
-				<span>����ʡ��С��ҵ��������ƽ̨</span>
-				<span>2019-01-18</span>
-				<div class="right-div">
-					<img src="https://www.fujiansme.com/statics/images/wap/eye.png" />
-					<!--<span id="hits"></span>-->
-					<span>1404</span>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-xs-12 title_zhc">
-				<span>ʡ������ ���и�������֧�У����ڼӿ��ƽ�Ӧ���˿������Ե㹤����֪ͨ</span>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-xs-12 content_zhc">
-				<div style="text-align: center;"><span style="font-family: ΢���ź�; font-size: 16px;">��������С��2019��9��</span></div>
-<div><span style="font-size:16px;"><span style="font-family:΢���ź�;">���й������й��ž֡������н��ڼ�ܾ֡�ƽ̶�ۺ�ʵ���������֣���������ʡ�ڸ�����������֧�С�ƽ̶�ۺ�ʵ����֧�С�����Ͻ�ڸ��أ��С�����֧�У�</span></span></div>
-<div><span style="font-size:16px;"><span style="font-family:΢���ź�;">����Ϊ�᳹��ʵ������ʡ�����������ڽ�һ��֧��ȫʡ��С��ҵ��չʮ����ʩ��֪ͨ����������2018��17�ţ�����ʵʩӦ���˿����������ģʽ���ؿ���С΢��ҵ�����������־ͼӿ��ƽ�Ӧ���˿������Ե㹤��֪ͨ���£�</span></span></div>
-<div><span style="font-size:16px;"><span style="font-family:΢���ź�;">����һ������Ŀ�꼰����</span></span></div>
-<div><span style="font-size:16px;"><span style="font-family:΢���ź�;">����Ϊ�ƶ�����ҵ�͹�Ӧ��������ҵ֧����С΢��ҵʵ��Ӧ���˿����ʣ��̻���С΢��ҵ�����ʲ��������С΢��ҵ����Ч�ʣ�������Ӧ����������ҵ���Ż��ݡ�����С��ҵЭͬ���׷�չ��������̬��������չ���ڻ���������ҵ�͹�Ӧ��������ҵ֧����С��ҵӦ���˿������Ե㹤������ͨ������������������Ӧ���˿����ʷ���ƽ̨����ȷ�ϣ�������С΢��ҵʵ��Ӧ���˿�������ʵĴ���ҵ�͹�Ӧ��������ҵ��������С΢��ҵ������ʽ���һ���������轱����</span></span></div>
-<div><span style="font-size:16px;"><span style="font-family:΢���ź�;">����������������ʽ</span></span></div>
-<div><span style="font-size:16px;"><span style="font-family:΢���ź�;">�����������У���ƽ̶�ۺ�ʵ��������ͬ��Ϊ���壬�������й��Ų�����ǰ������������ҵ�����Ļ���������ȷ��1�ң��������ϱ�ʡ������ҵ����ҵ��Ӧ��������ҵ�������Խӵ����������к�����ϵͳ����ǿ��ͨЭ������������ָ����������չӦ���˿������Ե㹤����ʡ������ҵ�͹�Ӧ��������ҵӦ���˿������Ե㹤���������ڵ����������ܲ���ͳһʵʩ��ʡ�ڸ�����������Ҫ������ǿ�����ܲ���Э�����ƶ�Ͻ��Ӧ���˿������Ե㹤��ȡ�ý�չ���������ڻ������й�ҵ����Ϣ��һʱ�䱨������������������Ӧ���˿����ʷ���ƽ̨��</span></span></div>
-<div><span style="font-size:16px;"><span style="font-family:΢���ź�;">�������������ʽ�</span></span></div>
-<div><span style="font-size:16px;"><span style="font-family:΢���ź�;">����2019�꣬ʡ�������ڹ�ҵ����Ϣ��ר���ʽ�Ԥ���а���2000��ԪӦ���˿������Ե㽱���ʽ𣬽������ط��п����������С�</span></span></div>
-<div><span style="font-size:16px;"><span style="font-family:΢���ź�;">������һ���������󼰱�׼��������ҵ����ҵ�͹�Ӧ��������ҵ2018��1��1����2019��12��31���ڼ�ͨ������������������Ӧ���˿����ʷ���ƽ̨����ȷ�ϣ�����������ʡ��С΢��ҵʵ��Ӧ���˿���������껯������1%�ı������Դ���ҵ�͹�Ӧ��������ҵ���轱����������ҵ�����ʽ���߲�����200��Ԫ��</span></span></div>
-<div><span style="font-size:16px;"><span style="font-family:΢���ź�;">��������������Ч���񡣽����ʽ��п�ʱ��ʡ��������ͬʱ�´�Ӧ���˿������Ե㹤����ȼ�ЧĿ������񡣸������п�ͨ������&ldquo;֧������ҵ����ҵ��Ӧ��������ҵ����&rdquo;��ʽ������������Ч�����������ȼ�ЧĿ�������ȷ����ʵ�úý����ʽ�</span></span></div>
-<div><span style="font-size:16px;"><span style="font-family:΢���ź�;">���������ġ�����Ҫ��</span></span></div>
-<div><span style="font-size:16px;"><span style="font-family:΢���ź�;">���������������ܲ��š���������Ҫ�߶�����Ӧ���˿������Ե㹤���������о���ǿ����ϣ�Ѹ���ƽ������ܲ���Ӧ��ÿ���Ƚ�����10���ڣ����ϼ���Ӧ���˿������Ե㹤���ƽ���������񣨼�����������ʡ��������ʡ��������������Ը����Ե㹤���ƽ��������ͨ����</span></span><br />
-&nbsp;</div>
-<div><span style="font-size:16px;"><span style="font-family:΢���ź�;">������ϵ�˼���ϵ��ʽ��</span></span></div>
-<div><span style="font-size:16px;"><span style="font-family:΢���ź�;">����ʡ��������С��ҵ��&nbsp; �� �� 0591-87833634</span></span></div>
-<div><span style="font-size:16px;"><span style="font-family:΢���ź�;">�������и�������֧�л����Ŵ���&nbsp; ��ΰ�� 0591-88010921</span></span></div>
-<div><span style="font-size:16px;"><span style="font-family:΢���ź�;">����������Ӧ���˿������Ե㹤�������</span></span></div>
-<div>&nbsp;</div>
-<div style="text-align: right;"><span style="font-size:16px;"><span style="font-family:΢���ź�;">��������ʡ��ҵ����Ϣ����</span></span></div>
-<div style="text-align: right;"><span style="font-size:16px;"><span style="font-family:΢���ź�;">�����й��������и�������֧��</span></span></div>
-<div style="text-align: right;"><span style="font-size:16px;"><span style="font-family:΢���ź�;">���� 2019��1��14��</span></span></div>
-<div>&nbsp;</div>
-<div><span style="font-size:16px;"><span style="font-family:΢���ź�;">�����˼�����������</span></span></div>
-<div>&nbsp;</div>
-<div><span style="font-size:16px;"><span style="font-family:΢���ź�;">��ظ�����</span></span></div>
-<div><a href="http://www.fujiansme.com/uploadfile/2019/0118/20190118025102182.doc"><span style="font-size:16px;"><span style="font-family:΢���ź�;">���� Ӧ���˿������Ե㹤�������.doc</span></span></a></div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-xs-12 excel">
-											</div>
-		</div>
-		<div class="row">
-			<div class="col-xs-12 xgxw">
-				<img src="https://www.fujiansme.com/statics/images/wap/tuoyuan.png" /><span>�������</span>
-			</div>
-		</div>
-		<div class="row xw_item">
-			<div class="col-xs-12" onclick="location.href='http://www.fujiansme.com/index.php?m=content&c=index&a=show&catid=699&id=2372'">
-				<p>ʡ������ ʡ�����������ڹ���2018�긣��ʡС��΢����ҵ��ҵ����ʾ������������֪ͨ</p>
-				<span>2018-12-27</span>
-			</div>
-		</div>
-			</div>
-<script language="JavaScript" src="https://www.fujiansme.com/api.php?op=count&id=2446&modelid=32"></script>
-<script type="text/javascript" src="https://www.fujiansme.com/statics/js/wap/base.js"></script>
-<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.3.2.js"></script>
-<script type="application/javascript">
-	window.onFFCS_JBReady = function () {
-		var url = window.location.href;
-		FFCS_JB.app_window.showShare(url,'ʡ������ ���и�������֧�У����ڼӿ��ƽ�Ӧ���˿������Ե㹤����֪ͨ','��������С��2019��9�Ÿ��й������й��ž֡������н��ڼ�ܾ֡�ƽ̶�ۺ�ʵ���������֣���������ʡ�ڸ�����������֧�С�ƽ̶�ۺ�ʵ����֧��   ','',function(ret){
-			if('1'==ret){
-				// FFCS_JB.toast('success');
-			}else {
-				//FFCS_JB.toast('failure');
-			}
-		});
-	}
-	//ios-js
-	function setupWebViewJavascriptBridge(callback) {
-		if (window.WebViewJavascriptBridge) { return callback(WebViewJavascriptBridge); }
-		if (window.WVJBCallbacks) { return window.WVJBCallbacks.push(callback); }
-		window.WVJBCallbacks = [callback];
-		var WVJBIframe = document.createElement('iframe');
-		WVJBIframe.style.display = 'none';
-		WVJBIframe.src = 'https://__bridge_loaded__';
-		document.documentElement.appendChild(WVJBIframe);
-		setTimeout(function() { document.documentElement.removeChild(WVJBIframe) }, 0)
-	}
-	// ios-������
-	function showShare() {
-		setupWebViewJavascriptBridge (function (bridge) {
-			var param = {};
-			var url = window.location.href;
-			param.shareUrl = url;
-			param.shareText = 'ʡ������ ���и�������֧�У����ڼӿ��ƽ�Ӧ���˿������Ե㹤����֪ͨ';
-			param.shareContent = '��������С��2019��9�Ÿ��й������й��ž֡������н��ڼ�ܾ֡�ƽ̶�ۺ�ʵ���������֣���������ʡ�ڸ�����������֧�С�ƽ̶�ۺ�ʵ����֧��   ';
-			bridge.callHandler('showShare', param, function responseCallback(result) {})
-		})
-	}
-	var ua = navigator.userAgent.toLowerCase();
-	if(ua.match(/MicroMessenger/i)=="micromessenger") {
-		wx.miniProgram.getEnv((res)=>{
-			if (!res.miniprogram) {
-				window.onload = showShare();
-			}
-		})
-	}else{
-		window.onload = showShare();
-	}
-
-	//�ж�΢��������
-	</script>
-<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
-<script>
-    var shareTitle = 'ʡ������ ���и�������֧�У����ڼӿ��ƽ�Ӧ���˿������Ե㹤����֪ͨ';
-    var shareDesc = '��������С��2019��9�Ÿ��й������й��ž֡������н��ڼ�ܾ֡�ƽ̶�ۺ�ʵ���������֣���������ʡ�ڸ�����������֧�С�ƽ̶�ۺ�ʵ����֧��   ';
-    var shareLink = window.location.href.split('#')[0];
-    var shareImgUrl = 'https://www.fujiansme.com/statics/images/weixin/share_logo.jpg';
-    var location_url = encodeURIComponent(window.location.href.split('#')[0]);
-    $.ajax({
-        type: "POST",
-        url: "index.php?m=weixin&c=jssdk&a=index",
-        data:{url:location_url},
-        dataType: 'json',
-        success: function(res) {
-            if (res.code == 1) {
-                if(res.data){
-                    console.log(res.data);
-                    //shareLink = decodeURIComponent(res.data.url);
-                    wx.config({
-                        debug: false,
-                        appId: res.data.appId,
-                        timestamp: res.data.timestamp,
-                        nonceStr: res.data.nonceStr,
-                        signature: res.data.signature,
-                        jsApiList: [
-                            // ����Ҫ���õ� API ��Ҫ�ӵ�����б���
-                            'onMenuShareTimeline',
-                            'onMenuShareAppMessage',
-                            'onMenuShareQQ',
-                            'onMenuShareWeibo',
-                            'onMenuShareQZone'
-                        ]
-                    });
-                    wx.ready(function () {
-                        //����������
-                        wx.onMenuShareAppMessage({
-                            title: shareTitle,
-                            desc: shareDesc,
-                            link: shareLink,
-                            imgUrl: shareImgUrl,
-                            success: function (res) {
-                                shared(shareLink, "friend", shareGid);
-                            },
-                            fail: function (res) {
-                                alert(JSON.stringify(res));
-                            }
-                        });
-                        //����������Ȧ
-                        wx.onMenuShareTimeline({
-                            title: shareTitle,
-                            desc: shareDesc,
-                            link: shareLink,
-                            imgUrl: shareImgUrl,
-                            success: function (res) {
-                                shared(shareLink, "Timeline", shareGid);
-                            },
-                            fail: function (res) {
-                                alert(JSON.stringify(res));
-                            }
-                        });
-                        //������QQ
-                        wx.onMenuShareQQ({
-                            title: shareTitle,
-                            desc: shareDesc,
-                            link: shareLink,
-                            imgUrl: shareImgUrl,
-                            success: function (res) {
-                                shared(shareLink, "QQ", shareGid);
-                            },
-                            fail: function (res) {
-                                alert(JSON.stringify(res));
-                            }
-                        });
-                        //������weibo
-                        wx.onMenuShareWeibo({
-                            title: shareTitle,
-                            desc: shareDesc,
-                            link: shareLink,
-                            imgUrl: shareImgUrl,
-                            success: function (res) {
-                                shared(shareLink, "Weibo", shareGid);
-                            },
-                            fail: function (res) {
-                                alert(JSON.stringify(res));
-                            }
-                        });
-                        //������QZone
-                        wx.onMenuShareQZone({
-                            title: shareTitle,
-                            desc: shareDesc,
-                            link: shareLink,
-                            imgUrl: shareImgUrl,
-                            success: function (res) {
-                                shared(shareLink, "QZone", shareGid);
-                            },
-                            fail: function (res) {
-                                alert(JSON.stringify(res));
-                            }
-                        });
-                    });
-                }
-            }
-        }
-    });
-
-</script><script src="https://www.fujiansme.com/statics/js/wap/appjs.js"></script>
-<script src="https://www.fujiansme.com/statics/js/wap/ScrollImg.js"></script>
-
-<script>
-//    window.onFFCS_JBReady = function () {
-//        FFCS_JB.app_window.hideNavBar(function(ret){
-//            if('1'==ret){
-//                // FFCS_JB.toast('success');
-//            }else {
-//                //FFCS_JB.toast('failure');
-//            }
-//        });
-//    }
-
-    //ios-js
-//    function setupWebViewJavascriptBridge(callback) {
-//        if (window.WebViewJavascriptBridge) { return callback(WebViewJavascriptBridge); }
-//        if (window.WVJBCallbacks) { return window.WVJBCallbacks.push(callback); }
-//        window.WVJBCallbacks = [callback];
-//        var WVJBIframe = document.createElement('iframe');
-//        WVJBIframe.style.display = 'none';
-//        WVJBIframe.src = 'https://__bridge_loaded__';
-//        document.documentElement.appendChild(WVJBIframe);
-//        setTimeout(function() { document.documentElement.removeChild(WVJBIframe) }, 0)
-//    }
-
-//    var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios�ն�
-//    // ���ذ�ť
-//    $('.btn_return').click(function(){
-//        if (isiOS) {
-//            setupWebViewJavascriptBridge (function (bridge) {
-//                bridge.callHandler('finishPage', function responseCallback(result) {})
-//            })
-//        } else {
-//            FFCS_JB.app_window.finishPage();
-//        }
-//    });
-//
-//    //����ios appͷ��
-//    function hideNavBar() {
-//        setupWebViewJavascriptBridge (function (bridge) {
-//            bridge.callHandler('hideNavBar', function responseCallback(result) {})
-//        })
-//    }
-//    window.onload = hideNavBar();
-
-    $(function () {
-        var scrollImg = $.ScrollImg('.scroll ul');
-    });
-</script>
-
-</body>
-</html>
+['福建省促进中小企业发展工作领导小组各成员单位，各设区市工信局、平潭综合实验区经发局：', '2019年福建省中小企业工作要点', '福建省促进中小企业发展工作领导小
+组办公室', '（福建省工业和信息化厅', '（此件主动公开）2019年福建省中小企业发展工作要点', '坚持以习近平新时代中国特色社会主义思想为指导，深入贯彻落实习近平
+总书记关于支持民营（中小）企业发展的重要指示和参加十三届全国人大二次会议福建代表团审议时的重要讲话精神，以贯彻落实', '为重要抓手，努力推动各项民营（中小）
+企业扶持政策落地见效，持续优化中小企业创业、创新、创造环境，促进全省中小企业高质量发展', '（一）加强惠企政策宣贯落实', '和国家层面已出台及省委、省政府支持
+中小企业发展十条措施、加快民营企业发展若干意见等系列政策宣贯工作，开展“惠企政策入百园进万企”活动，加强解读培训，扩大政策宣传覆盖面', '发挥省促进中小企业
+发展工作领导小组作用，督促抓好各项惠企政策落实，牵头开展中小企业发展环境评估工作，研究起草', '福建民营经济发展促进条例', '福建省促进中小企业发展条例', '推
+进企业降本减负，推动清理政府部门和国有企业拖欠民营企业中小企业账款工作', '加强民营（中小）企业生产经营运行监测，抓好政策研究和储备，持续健全支持民营（中小
+）企业发展法规政策体系', '充分发挥省、市、县三级产融合作工作协调机制作用，组织举办“政基企”、“政银企”等对接活动，推动有融资需求的重点企业（项目）与金融
+机构的对接', '优化福建省“产融云”平台，整合集聚各类投融资机构、企业征信等资源，利用“系统智能匹配+人工复核推荐”模式，为产融双方提供精准匹配对接', '推进
+金融机构、大企业和供应链核心企业支持中小企业应收账款融资试点，拓宽企业融资渠道', '推进福州软件园、厦门火炬高新区、将乐经开区、闽北经开区等四个园区创建国家
+“双创”特色载体，打造示范标杆', '实施促进大中小企业融通发展三年行动计划，构建大企业与中小企业协同创新、共享资源、融通发展的产业生态', '举办第二届“创响福
+建”中小企业创新创业大赛暨“创客中国”福建省区域赛，重点发掘一批工业和信息化领域“好项目”', '加快打通“政企直通车”与设区市和省直有关部门通道，建立协同联
+动机制，打造“政企直通车”服务品牌', '提升中小企业公共服务平台网络、示范平台、示范基地服务水平，深入开展中小微企业服务券试点工作', '开展服务民营企业“三个
+一百”活动，深化全系统“百千万”挂钩联系企业、项目制度', '组织开展典型企业管理经验分享推广、企业高级经营管理人才培训和企业管理咨询诊断活动，促进企业管理提
+升', '落实各项减税降费政策和有关进口税收政策，加强政府采购促进中小企业发展有关政策落实情况检查', '在门户网站常态化公开各项收费目录清单，并建立目录清单动态
+调整机制，做好减税降费政策宣传解读', '省级财政分别安排资金用于支持企业研发投入、培育科技小巨人领军企业、省级高新企业入库备案和出库企业奖补、新型研发机构奖
+励、创新券资金以及支持我省新申请的专利转化为实际生产力', '继续统筹安排福厦泉国家自主创新示范区建设资金3亿元，支持福厦泉国家自主创新示范区先行先试改革创新
+体制机制', '安排科技计划项目经费，支持提升科研实力', '持续推进科技金融试点工作，继续实施专利权质押贷款贴息政策、科技保险补贴政策，启动科技型中小微企业贷款
+试点', '继续安排普惠金融发展资金，落实融资担保资金政策，促进“小微农”融资', '积极配合省商务厅落实中央服务业发展专项相关政策，指导试点地区做好电子商务进农
+村综合示范创建和现代供应链体系建设等工作，发挥财政资金引导示范作用，推动内贸流通和现代服务业转型升级，促进中小商贸流通高质量发展', '（一）拓宽企业融资渠道
+', '落实企业债券贴息政策，推动符合条件的企业发债融资', '规范政府出资产业投资基金登记管理工作，推进基金信用体系建设', '加大重大项目融资对接力度', '（二）打
+造“双创”平台', '贯彻落实各项“双创”政策措施，抓好各项配套政策落地，利用福建多区叠加良好契机，充分调动全社会创新创业潜能，打造双创升级版', '积极推动福州
+新区、泉州市丰泽区和厦门火炬高技术产业开发区双创示范基地建设再上新台阶，总结梳理可复制推广的成功模式经验', '继续办好“创响中国”、双创活动周等系列主题活动
+，促进双创要素精准对接', '促进6·18协同创新院平台建设，推动更多高层次专家和优秀企业入驻协同创新院', '再建设一批产业技术分院，将6·18协同创新院产业技术分院
+打造成服务常年对接工作的平台和有效抓手', '建立健全向民间资本推介项目长效机制，进一步充实吸引民间投资重点项目库，常态化向民间资本推介投资回报机制明确、商业
+潜力大的重点领域项目', '推动有关方面继续破除民间资本进入重点领域的隐形障碍，引导社会力量增加普惠性学前教育、健康、养老等服务供给，鼓励民间资本投入脱贫攻坚
+、铁路、公路、水运、机场、水利、能源、农业农村、生态环保、社会民生等基础设施补短板领域', '严格规范市场准入管理，区分不同准入类型采取不同举措，推进“全国一
+张清单”管理模式，建立清单动态调整机制', '开展高职院校与企业合作举办混合所有制二级办学机构、产业学院建设试点，推进企业参与人才培养', '会同省发改委等部门遴
+选一批有代表性、影响力和改革意愿的市、县（区）和职业院校、企业开展省级产教融合建设试点', '深化高职教育“二元制”人才培养模式改革，扩大面向中小学企业员工学
+历教育规模', '发挥福建省“互联网+”大学生创新创业大赛等平台作用，发掘和培育一批“双创”优秀项目和优秀团队', '推动职业院校与行业企业共建共享优质公共教育资
+源，建立一批“互联网+”培训平台', '加强科技型中小企业评价工作，全面掌握我省科技型中小企业概况，构建科技型中小企业信息库', '持续推进科技小巨人领军企业培育'
+, '加强高新技术企业培育，加大省级、国家高新技术企业的支持力度', '建立科技型中小企业、科技小巨人领军企业、省级高新技术企业、国家高新技术企业的梯级培育机制
+，不断提高我省国家高新技术企业的数量和质量', '推动我省科技企业孵化器、众创空间的建设和发展', '做好“支持打造特色载体推动中小企业创新创业升级”工作', '加强
+对“科技资源支撑”、“高端人才引领”类型创新创业特色载体的业务指导', '继续办好中国创新创业大赛（福建赛区）暨福建创新创业大赛，打造大众创业、万众创新的众扶
+平台', '继续推进科技创新券制度，推动科技资源开放共享；加强省科技型中小企业技术创新资金支持；推进研发经费投入分段补助；继续落实科技小巨人领军企业研发费用加
+计扣除专项奖励；推进科技金融紧密结合，发挥好省级科技型中小微企业贷款专项补偿资金的作用', '（一）出台我省降低社会保险费率的综合方案，继续贯彻执行阶段性降低
+工伤保险和失业保险费率政策，减轻中小企业负担', '（二）深入开展失业保险援企稳岗“护航行动”和技能提升“展翅行动”，支持企业稳定岗位，推动稳岗补贴和技能提升
+补贴政策落实', '（三）鼓励支持中小企业发挥主体作用，大力开展职业技能培训，支持中小企业与技工院校合作开展企业新型学徒制培养，对符合条件的按规定给予职业培训
+补贴', '（四）开展最低工资标准实施情况调查评估，对最低工资实施情况和对企业的影响程度进行评估，稳慎把握最低工资标准调整节奏', '整合建设集企业办事、企业档案
+、在线咨询和环境质量、环保动态、百姓监督等功能为一体“亲清服务平台”', '细化防止“一刀切”的有效举措，加强政策配套，强化工作统筹，科学研判不同地区、不同领
+域、不同行业的污染排放特点和区域环境管理需求，做到综合施策与因事施策相结合', '坚决杜绝平时不作为、临时乱作为情况，切实维护守法企业利益，禁止生态环保领域的
+“一刀切”执法', '升级更新福建省企业环境信用评价系统，落实企业环境信用动态评价工作', '（二）持续整顿规范房地产开发、销售、中介行为，加强房地产行业信用体系
+建设，营造诚信有序、公平竞争的行业环境，加快培育发展民营住房租赁企业、物业服务企业、房地产中介机构', '福建省物业管理条例（修订）', '的落地实施，完善配套的
+指导性规范文件，加大对物业服务企业、房地产中介机构从业人员法律法规、专业能力、经营理念、职业操守等方面的宣传培训力度', '十、省农业农村厅', '实施农产品产地
+初加工补助项目，支持中小企业建设农产品储藏、保鲜、烘干、清选分级、包装等设施装备，新建及改造升级200个蔬果、粮食、茶叶等农产品产地初加工中心', '完善农产品
+加工技术研发体系建设，推动农产品加工企业技术装备改造升级', '推进农产品及农产品加工副产物综合利用，总结推介一批农产品和加工副产物综合利用典型案例，提高副产
+物循环利用、全值利用和梯次利用水平', '（二）推动休闲农业和乡村旅游升级', '开展休闲农业试点示范培育工作，新增一批中国美丽休闲乡村、全国休闲农业精品园区（农
+庄）和省级休闲农业示范点、省级最美休闲乡村', '深入开展休闲农业精品品牌和线路推介活动，推荐入选一批全国休闲农业和乡村旅游精品景点线路，推介一批省级休闲农业
+乡村旅游精品线路', '（三）推进农村创业创新', '依托新型职业农民培育工程等项目，培训农村创业创新人才1000名', '举办福建省第二届农村创业创新项目创意大赛，选拔
+培育一批优秀创意项目和创业主体，对接优质资源要素', '积极开展宣传推介活动，推介一批全国农村创业创新典型县、全国农村创业创新优秀带头人案例', '（一）继续实施
+“助保贷”，进一步落实与各银行签订的合作协议，制定出台鼓励金融机构支持中小企业融资的具体措施', '（二）精选支持展会计划，优化闽货华夏行政策措施，适当调整政
+策支持领域并扩大支持力度', '（三）完善支持政策，积极拓展服务贸易国际市场，提升展会计划的精准度和资金使用效率', '支持企业设立海外分支机构、有序开展境外并购
+，申请国际认证、商标注册，充分发挥香港国际贸易中心的作用，加强闽港服务贸交流合作，不断拓展“一带一路”沿线国家服务贸易市场空间', '对示范基地、示范企业实行
+分类指导、动态管理，加强典型经验宣传和推广', '，加大培训力度，促进电子商务持续健康发展', '完善电子商务支撑服务体系，持续优化电子商务发展环境，培育线上线下
+融合发展的数字商务企业，加快商务活动全链条的数字化、网络化、智能化', '（一）着力完善、提升和拓展商事制度改革各项措施', '进一步完善小微企业名录各项功能，加
+强小微企业名录系统数据的更新维护', '以建设扶持小微企业的主要数据平台和服务平台为契机，积极推进政府跨部门信息共享', '（二）扩大民营企业知识产权质押融资覆盖
+面', '引导商业银行探索和创新知识产权信贷模式，积极拓展专利权、商标权等知识产权质押融资业务', '推动知识产权质押贷款贴息政策向民营企业倾斜，鼓励商业保险公司
+开展知识产权质押贷款保证保险业务', '（三）实施专利导航产业发展创新计划', '围绕集成电路、新型显示等福建省“十三五”战略性新兴产业重点领域开展专利导航，加强
+高价值专利的培育和产业布局', '建设福建省自主知识产权竞争力产业导航大数据中心及若干个具有地方产业特色的分中心，加快产业专利导航成果落地，服务民营经济转型升
+级高质量发展', '（四）加强知识产权服务平台建设', '进一步完善“知创中国”与“知创福建”线上线下知识产权公共服务平台服务功能，面向全社会提供知识产权全周期、
+全链条、全领域服务', '推动以民营企业为主体的福建省装备制造业知识产权联盟成立并有效运营，促进福建装备制造业高质量发展', '充分运用“互联网+”等信息化手段强
+化知识产权保护能力，在相关重点领域继续开展“护航”专项执法行动，严厉打击专利侵权和假冒违法行为', '围绕重点优势产业申报和筹建产业知识产权保护中心', '（一）
+紧密结合全国第四次经济普查工作，摸清我省中小工业企业和个体户的数量、从业人员和产业结构等情况', '把控源头数据质量，跟踪掌握规模以下工业企业变化情况，进一步
+提升规模以下工业统计调查能力', '（二）深入开展规模以下工业和个体户重点和热点问题研究和规模以下工业企业样本轮换工作', '（三）开展中小企业运行情况的统计调查
+和监测分析，客观反映我省中小工业企业发展变化趋势', '（一）做好银行业金融机构服务民营企业监测评价', '对相关银行业金融机构服务民营企业整体水平和质效开展全面
+评价，按年度通报监测评价结果', '推动银行业金融机构完善服务民营企业内部绩效考核机制和尽职免责机制，营造分支机构和业务人员对民营企业“愿贷、敢贷、会贷”的积
+极氛围', '（二）加强民营企业直接融资服务', '建立动态调整的分层次、分地区、分行业分梯队的上市后备企业资源库，加快辅导和培育符合条件的中小企业上市融资', '积
+极推动中小企业在“新三板”和区域性股权市场挂牌融资，充分发挥区域性股权市场的孵化培育功能', '扩大债券融资规模，推动符合条件的中小民营企业到银行间市场和沪深
+交易所发债，降低融资成本', '完善发债增信机制，发挥各类政府性融资担保机构的作用，支持其在风险可控的前提下为中小民营企业发债提供增信支持', '引导督促金融机构
+科学设置服务民营企业小微企业考核指标和激励办法，推出更多针对小微企业的金融创新产品，提升金融服务的覆盖面、可得性和满意度', '鼓励金融机构创新金融产品和服务
+，拓宽产业链融资渠道', '开展福建省金融创新项目评选，探索开展“服务实体经济十佳金融机构”“十强金融机构”评选', '推动我省中小企业参与国内外交流合作，拓展国
+内外市场', '全力做好中国-东盟自贸协定项下原产地证签证工作，加强与海关、市场监督管理、外贸协会、认证认可协会等机构的沟通与合作，帮助企业用足用好关税优惠政
+策，降低外贸成本，占领国际市场', '加强形势分析和企业调研，提供咨询培训，增强企业防范和应对经贸摩擦的意识和能力', '引导企业深耕欧日等传统市场，开拓东盟市场
+', '加强贸促调解业务的宣传，积极参加业务培训与交流，不断提高调解工作的专业技能和水平，帮助企业化解国际经贸商事争议，维护企业合法权益', '开展各类活动，宣传
+展示我省民营经济和民营企业家的贡献', '整合工商联商会组织、民营企业新闻平台资源，构建广覆盖、多层次、立体化的大宣传格局', '探索建立系统上下联通、部门相互协
+调的舆情研判处置机制', '促进各地建立党委政府与商会组织、民营企业沟通协商机制，及时反映和解决民营企业和商会遇到的难题', '做好全国民营企业500强推荐，发布201
+9全省民营企业百强', '持续推进民营企业调查点工作', '二是加强厅际合作共促民营企业发展', '联合金融部门解决民企融资难题，引导企业用好省级纾困基金、纾困专项债'
+, '联合省高院、省检察院、仲裁部门加强诉调衔接、法治宣传教育和仲裁法律服务，强化民营企业法治保障', '参与省协调劳动关系三方会议制度，推动企业与职工协商共事
+、机制共建、效益共创、利益共享', '推动民营企业积极参与混合所有制经济，深度参与军民融合发展', '密切与沿线国家工商界、闽籍工商社团的联络交往，组织企业赴非洲
+开展务实合作，融入“一带一路”建设', '加强“走出去”培训，引导企业防范化解风险，规范境外投资经营', '四是开展引导民营企业创新驱动发展服务工作', '征集我省优
+秀民营企业科技创新项目，做好人才项目资本对接服务，组织商会、民营企业参加“6·18”、“9·8”、海峡两岸人才交流合作大会、民营企业产业项目对接会等重要经贸活
+动', '（三）推动惠企政策落地', '广泛开展惠企政策宣传，配合开展支持民营经济发展政策措施落实情况督查，推动支持中小微企业发展、促进民间投资的政策措施落地见效
+', '调研跟踪政府部门、大型国有企业拖欠民营企业账款的清欠进展情况', '贯彻执行好降准政策，发挥存款准备金政策促进信贷结构优化的正向激励作用', '用好用足人民银
+行再贷款、再贴现政策，发挥逆周期调结构功能，将政策效应与经营收益有机结合', '（二）稳定实体经济的信贷供应', '重点加大单户授信总额1000万元及以下小微企业贷款
+发放，加强无贷户的首贷支持和有贷户的续贷服务', '引导金融机构下放民营和小微贷款审批权限，改进行业“一刀切”的信贷授信模式，开展无还本续贷金融服务', '会同工
+信等部门开展小微企业应收账款融资试点，优化“产融云”平台功能，更好发挥平台政银企对接作用，形成产业链金融生态圈', '推动实现银行间市场发债总量稳步增长、品种
+创新继续突破', '推广绿色票据、并购票据、资产支持票据、扶贫专项债、双创债等创新型债务融资工具', '积极推进创设民营企业债券融资支持工具，注重工具实施效果，避
+免救助道德风险', '支持金融机构发行小微企业金融专项债', '（四）建设征信业务综合平台', '建设完善福建省征信业务综合平台，对“金融机构关注度高、时间节点性强、
+对防范信贷风险有重要意义”的领域继续推进非银行信息互联共享，形成守信获益、失信惩戒，一处失信、处处受制的社会诚信氛围', '十八、福建省税务局', '做好申报表调
+整、新旧政策衔接期、系统升级等准备工作', '梳理政策、征管、服务等方面的问题，扎实开展调查研究，及时回应纳税人诉求', '（二）积极落实相关税收优惠政策', '落实
+党中央、国务院对减税降费决策部署，持续推进2019年深化增值税改革各项措施落地生根，切实降低小微企业税收负担，促进创业创新', '落实小型微利企业普惠性所得税优惠
+政策', '做好中小企业税收优惠政策的宣传工作，实现纳税人对税收优惠政策理解到位', '全方位提升各项功能应用率，实现“单一窗口”业务功能应用全覆盖', '积极推动免
+除查验无问题外贸企业吊装、移位、仓储费用政策落地执行；对不涉证不涉税，仅涉及查验后改单放行的报关单，实施“先放后改”作业，提高放行效率', '（五）创新税收征
+管制度', '实施“税费电子支付”“自报自缴”“汇总征税”“税收多维担当”“减免税无纸化试点”等新型税收征管制度', '推进关税保证保险改革，拓展银关保、银关融、
+同业联合担保等担保创新项目，有效降低担保门槛，缓解中小企业银行授信额度不足困难', '与“一带一路”沿线国家或地区开展AEO互认，促进中小企业优质产品走出国门走
+向世界', '二十、国家统计局福建调查总队', '（一）依据国家调查制度，继续扎实做好新设小微企业和个体户跟踪调查报表', '（二）加大企业走访，适时反映新设立小微企
+业的成长过程、发展特点、面临困难和政策诉求等', '（三）加大对调研数据诠释力度，加强对重大经济政策的分析研究，为党政领导宏观决策提供依据', '持续完善“福建银
+行业服务实体经济监测评价体系”，落实小微企业金融服务“两增两控”任务目标', '引导各银行业机构进一步加强小微企业贷款利率管理，实施差别化的利率定价，确保2019
+年普惠型小微企业贷款利率保持在合理水平', '督促银行保险机构规范经营行为，杜绝不合理成本转嫁，严禁在发放贷款时附加不合理条件，严禁变相抬升小微企业融资成本；
+在“两禁两限”基础上，鼓励有条件的银行机构进一步主动扩大降费范围', '推动辖内各银行业机构提高小微企业业务的考核分值权重，将小微企业业务考核指标完成情况、监
+管政策落实情况与分支机构主要负责人考核评优及提拔任用挂钩', '通过实行小微企业贷款内部资金转移定价优惠、安排专项激励费用予以补贴等方式，提升分支机构和一线从
+业人员开展小微企业业务的积极性', '二是落实授信尽职免责制度和容错纠错机制', '推动辖内各银行业机构进一步明确对分支机构和基层人员的尽职免责认定标准和免责条件
+,探索建立尽职免责“负面清单”，设立内部问责申诉通道', '推动各银行业机构进一步将授信尽职免责与不良贷款容忍制度有机结合，力争将普惠型小微企业贷款不良率控制
+在不高于各项贷款不良率3个百分点以内;对小微企业不良贷款率未超出容忍度标准的分支机构，在无违反法律法规和监管规则行为的前提下，可对分支机构负责人、小微业务部
+门和从业人员免予追责', '对由于主观原因形成损失的普惠型小微企业贷款，在贷款核销后两年内收回全部或部分贷款本金的，可酌情减轻相关责任', '引导辖内银行持续完善
+服务小微企业的组织架构', '引导辖内银行保险机构积极推进政司银保企信息对接，优化信贷管理', '落实“百名行长进企业”活动要求，经营机构主要负责人实地走访，帮扶
+小微企业解决实际困难', '推动辖内银行扎实开展普惠金融精细年活动，改进贷款审批管理、贷款期限管理、贷款增信管理、贷款支付管理、贷款续贷管理', '积极配合地方政
+府加强企业信用信息平台建设，强化银行与部门间的信息资源对接整合', '深化与政策性担保公司业务合作，进一步完善风险共担机制', '鼓励银行业机构加强与税务部门的沟
+通联系，搭建“互联网+大数据+金融+税务”平台，创新银税合作信贷产品', '引导银行保险机构进一步加大“银保合作”力度，积极推进“信贷+保险”服务模式，因地制宜推
+广小微企业贷款保证保险；进一步深化科技保险、专利保险、农业保险等保费补贴补偿机制', '推动优质的科技型企业申报科创板', '支持鼓励中小企业通过股权再融资、债券
+融资、并购重组、私募创投等渠道筹集发展资金', '（三）支持海交中心为部分中小微企业拓宽融资渠道', '（四）督促证券期货经营机构为中小企业量身定制个性化金融中介
+服务，提升服务中小企业能力', '（五）加强中小上市挂牌企业监管，提升规范运作水平，提高发展质量']
