@@ -12,18 +12,12 @@ from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.feature_extraction.text import CountVectorizer
 
 
-def cut_sentence(paragraph):
-    pattern = '《|》|。|\.|[\s]'
-    result = re.split(pattern, paragraph)
-    return result
-
-
 def build_vocabulary(data: pd.DataFrame):
     counter = Counter()
     vocabulary = dict()
     for index, row in data.iterrows():
         para = row['content']
-        sentences = cut_sentence(para)
+        sentences = policy_util.cut_sentence(para)
         for sent in sentences:
             for char in sent:
                 counter[char] += 1
@@ -41,14 +35,14 @@ def extract_entity(paragraphes):
     """
     extract_term = []
     for para in paragraphes:
-        sentences = cut_sentence(para)
+        sentences = policy_util.cut_sentence(para)
         for sent in sentences:
             print(sent)
             term = []
             sent_seged = jieba.posseg.cut(sent.strip())
             for s in sent_seged:
                 sege = str(s.flag)
-                if sege.find('n') >= 0 and sege.find('v') < 0:
+                if (sege.find('n') >= 0 or sege.find('j') >= 0) and sege.find('v') < 0:
                     term.append(s.word)
             extract_term.append(term)
     extract_term = [str(term) for term in extract_term]
@@ -64,7 +58,7 @@ def tf_idf_statistic(data):
     all_word = []
     for index, row in data.iterrows():
         content = row['content']
-        paras = cut_sentence(content)
+        paras = policy_util.cut_sentence(content)
         words = extract_entity(paras)
         word = ' '.join(words)
         all_word.append(word)
@@ -89,7 +83,7 @@ def entity_recognition(data: pd.DataFrame):
 
 def extract_high_rate_word(data: pd.DataFrame, rate):
     """
-    提取高频词作为实体，使用tf-idf
+    提取高频词和专有名词作为实体，使用tf-idf
     :param data: 使用数据
     :param rate: 提取率，提取词频前%n的词
     :return:
@@ -125,19 +119,22 @@ def extract_high_rate_word(data: pd.DataFrame, rate):
     for i in range(len(entity_paras)):
         l = len(entity_paras[i])
         for j in range(l):
+            #提取带有引号的专有名词作为特殊实体
+            special = policy_util.find_all_special_entity(entity_paras[i][j])
+            entity_includes[i][j] += special
             entity_res = {
                 'id': i,
                 'para': entity_paras[i][j],
                 'entity': '|'.join(entity_includes[i][j])
             }
             policy_entity_res.append(entity_res)
-    policy_util.write_csv(policy_entity_res, 'data/result/policy_fujian_content_entity.csv')
+    policy_util.write_csv(policy_entity_res, 'data/result/policy_fujian_content_entity1.csv')
 
 
 def get_entity_para(content, entity):
     if not content:
         return []
-    paras = cut_sentence(content)
+    paras = policy_util.cut_sentence(content)
     result = []
     include_entity = []
     for para in paras:
@@ -213,5 +210,4 @@ if __name__ == '__main__':
     # data = pd.read_csv('data/policy_fujian.csv', header=0)
     # extract_special_policy(data)#使用依存关系分析标题
     data = pd.read_csv('data/policy_fujian_content.csv', header=0)
-    extract_high_rate_word(data, 0.1)
-
+    extract_high_rate_word(data, 0.2)
