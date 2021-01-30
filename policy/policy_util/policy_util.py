@@ -1,5 +1,6 @@
 import csv
 import re
+import json
 
 
 def write_csv(data, path):
@@ -15,7 +16,7 @@ def write_csv(data, path):
 
 
 def cut_sentence(paragraph):
-    pattern = '《|》|。|\.|[\s]'
+    pattern = '《|》|。|[\s]'
     result = re.split(pattern, paragraph)
     return result
 
@@ -32,3 +33,15 @@ def find_all_special_entity(sent):
         else:
             break
     return res
+
+
+def get_json_document(data_dict_list, path):
+    write_list = []
+    for data in data_dict_list:
+        for key in data.keys():
+            if isinstance(key, list):
+                data[key] = ','.join(data[key])
+        d = json.dumps(data, indent=4, separators=(',', ':'))
+        write_list.append(d)
+    with open(path, 'w', encoding='utf-8') as fp:
+        fp.writelines(write_list)
