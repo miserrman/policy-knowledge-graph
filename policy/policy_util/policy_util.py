@@ -16,7 +16,7 @@ def write_csv(data, path):
 
 
 def cut_sentence(paragraph):
-    pattern = '《|》|。|[\s]'
+    pattern = '《|》|。|[\s]|；'
     result = re.split(pattern, paragraph)
     return result
 
@@ -45,3 +45,19 @@ def get_json_document(data_dict_list, path):
         write_list.append(d)
     with open(path, 'w', encoding='utf-8') as fp:
         fp.writelines(write_list)
+
+
+def find_all(s: str, item):
+    index = 0
+    res = []
+    if len(item) == 0:
+        return []
+    while index < len(s):
+        t = s.find(item, index)
+        if t < 0:
+            break
+        else:
+            res.append(t)
+            index = t + len(item)
+    return res
+
