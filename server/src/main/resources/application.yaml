@@ -1,0 +1,16 @@
+server:
+  port: 8081
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://39.102.35.144:3306/policy?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: 123456
+    initial-size: 5
+
+mybatis:
+  mapper-locations: classpath:mappers/*.xml
+  type-aliases-package: com.longyan.policy.domain
+  configuration:
+    map-underscore-to-camel-case: true
+    auto-mapping-behavior: full

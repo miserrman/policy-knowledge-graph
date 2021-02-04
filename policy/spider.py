@@ -50,16 +50,22 @@ def load_clear_info(path):
     :param path:
     :return:
     """
-    data = pd.read_csv(path, names=['depart_id', 'detail', 'title'])
+    data = pd.read_csv(path, header=0)
     for index, row in data.iterrows():
         url = row['detail']
         content = requests.get(url, headers=headers)
         soup = BeautifulSoup(content.text)
         title = soup.findAll(name='div', attrs={'class': 'col-xs-12 page-header'})
+        date_info = soup.findAll(name='div', attrs={'class': 'row subheader'})
+        date = '2021-1-1'
         if title:
             header = title[0].h1.string
+        if date_info:
+            date = str(re.search('\d+-\d+-\d+', str(date_info[0])).group())
         data.iloc[index, 2] = header
-    data.to_csv(path, index=True)
+        data.iloc[index, 3] = date
+        print(date)
+    data.to_csv(path, index=False)
 
 
 def load_article_content(path, write_path):
@@ -213,9 +219,9 @@ def create_policy_content_chart(policy_chart):
 
 
 if __name__ == '__main__':
-    # # result = load_html(FUJIAN_UNIFORM_POLICY_NET)
-    # # write_csv(result, 'data/policy_fujian.csv')
-    # load_clear_info('data/policy_fujian.csv')
+    # result = load_html(FUJIAN_UNIFORM_POLICY_NET)
+    # write_csv(result, 'data/policy_fujian.csv')
+    load_clear_info('data/policy_fujian.csv')
     # result = load_article_content('data/policy_fujian.csv', 'data/policy_fujian_content.csv.txt')
     # policy_util.write_csv(result, 'data/policy_fujian_content.csv')
-    get_text('data/policy_fujian_content.csv', 'data/policy_fujian_content.txt')
+    # get_text('data/policy_fujian_content.csv', 'data/policy_fujian_content.txt')

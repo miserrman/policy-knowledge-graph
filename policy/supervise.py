@@ -3,6 +3,26 @@ import numpy as np
 import policy_util
 import re
 from sklearn.model_selection import train_test_split
+import gensim
+import torch
+from  torch import nn
+from torch.utils.data import DataLoader, Dataset, TensorDataset
+
+
+class RNN(nn.Module):
+    def __init__(self, input_len, hidden_size, num_layers, output_len):
+        super(RNN, self).__init__()
+        self.lstm = nn.LSTM(input_size=input_len,
+                            hidden_size=hidden_size,
+                            num_layers=num_layers,
+                            batch_first=True)
+        self.output_layers = nn.Linear(in_features=hidden_size, out_features=output_len)
+
+    def forward(self, x):
+        lstm_out, (h_n, h_c) = self.lstm(x, None)
+        output = self.output_layers(lstm_out[:, -1, :])
+        return output
+
 
 ENTITY_TYPE_MAP = {
     'None': 0,
@@ -20,6 +40,7 @@ def init_train_test_data(path):
     :param path:
     :return:
     """
+    pp = []
     paras = []
     result = []
     with open(path, 'r', encoding='utf-8') as fp:
@@ -37,11 +58,13 @@ def init_train_test_data(path):
                 continue
             if len(p) > 100 or len(entity) < 2:
                 continue
+            pp.append(p)
             d = {
                 'sent': p,
                 'entities': entity
             }
             result.append(d)
+    print(len(set(pp)))
     return result
 
 
@@ -100,13 +123,46 @@ def make_label(dict_list):
     return labels
 
 
-def train_policy(model, data_x, data_y):
+def word2vector(dict_list, train_data, emb_size=30):
+    word2_train_list = []
+    max_length, _ = max_sent(train_data)
+    for d in train_data:
+        text = d['sent']
+        word2_train_list.append(list(text))
+    model = gensim.models.Word2Vec(word2_train_list, size=emb_size, min_count=1, iter=10)
+    word2_make_list = []
+    for d in dict_list:
+        text = d['sent']
+        word2_make_list.append(list(text))
+    word2_result = []
+    for words in word2_make_list:
+        r = []
+        for char in words:
+            vector_list = model.wv[char]
+            r += list(vector_list)
+        for i in range(len(r), max_length):
+            r.append(0.0)
+        word2_result.append(r)
+    return word2_result
+
+
+def train_policy(data_x, data_y, epoches, batch_size, model=None):
     X_train, X_test, Y_train, Y_test = train_test_split(data_x, data_y, test_size=0.1, random_state=0)
-    print(X_train)
-    print()
+    X_train = word2vector(X_train, data_x)
+    X_test = word2vector(X_test, data_x)
+    train_dataset = TensorDataset(X_train, Y_train)
+    test_dataset = TensorDataset(X_test, Y_test)
+    train_loader = DataLoader(dataset=train_dataset, batch_size=batch_size, shuffle=True, num_workers=2)
+    #定义损失函数和优化器
+    a
+    for i in range(epoches):
+        for step, (batch_x, batch_y) in enumerate(train_loader):
 
 
 if __name__ == '__main__':
     data = init_train_test_data('data/policy_fujian_content.txt') #初始化训练数据，从文章提取所有训练数据
-    print("############成功提取所有数据###############")
+    # print("############成功提取所有数据###############")
     label = make_label(data)
+    train_policy(data, label)
+
+
