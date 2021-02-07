@@ -46,27 +46,31 @@
             </el-dialog>
         </div>
 
-        <el-row>
-            <el-col :span="2" :offset="1">
+        <el-row >
+            <el-col :span="2" >
+              <el-image  style="margin-left:50px;margin-top:5px;width:50%;height:50%;":src="require('../assets/imgs/logo.png')" fit="cover"></el-image>
+            </el-col>
+            <el-col :span="2" >
+              <el-image  style="margin-top:10px;width:100%;height:100%;":src="require('../assets/imgs/logo-name.png')" fit="cover"></el-image>
+            </el-col>
+
+            <el-col :span="2" offset="1">
               <!-- <el-button style="margin-top:10px; font-size:18px;" @click.native="gotoHome" type='text'>首页</el-button> -->
-              <el-button class="selected" size="mini" type="text" @click.native="gotoHome" style="font-size:20px;">首页</el-button>
+              <el-button size="mini" type="text" @click.native="gotoHome" style="padding-top:20px;font-size:100%;">首页</el-button>
             </el-col>
 
             <el-col :span="2">
                 <!-- <el-button style="margin-top:10px; font-size:18px;" @click.native="gotoHotlist" type='text'>热榜</el-button> -->
-                <el-button class="selected" size="mini" type="text" @click.native="gotoHotlist" style="font-size:20px;">悬赏榜</el-button>
+                <el-button  type="text" @click.native="gotoHotlist" style="padding-top:20px;font-size:100%;">政策匹配</el-button>
             </el-col>
             <el-col :span="4">
-                <!-- <el-input size="small" style="padding-top:10px;" v-model="search" placeholder="请输入你想要进行的查询">
-                    <el-button size="small" @click.native="gotoSearch" slot="append" icon="el-icon-search"></el-button>
+                <!-- <el-input size="small " style="padding-top:10px;" v-model="search" placeholder="请输入你想要进行的查询">
+                    <el-button type="text" size="medium " @click.native="gotoSearch" slot="append" icon="el-icon-search" ></el-button>
                 </el-input> -->
-                <el-autocomplete style="margin-top:18px;" size="mini" v-model="search" :fetch-suggestions="querySearch" placeholder="请输入你想要进行的查询"
+                <el-autocomplete style="width:150%;margin-top:14px;" size="small" v-model="search" :fetch-suggestions="querySearch" placeholder="请输入你想要进行的查询"
                                 :trigger-on-focus="false" @select="handleSelect" @keyup.native="headerSearch">
-                    <el-button @click.native="gotoSearch" slot="append" icon="el-icon-search"></el-button>
+                    <el-button style="width:50px;" @click.native="gotoSearch" slot="append" icon="el-icon-search" ></el-button>
                 </el-autocomplete>
-            </el-col>
-            <el-col :span="2">
-                <el-button size="mini" style="margin-top:18px;margin-left:10px;" @click.native="queryForm = true" type='primary'>提问</el-button>
             </el-col>
             <el-col :span="0.5" :offset="5">
                 <div class="btn-bell">
@@ -78,7 +82,8 @@
                     <span class="btn-bell-badge" v-if="message > 0"></span>
                 </div>
             </el-col>
-            <el-col :span="1.5"><div class="user-avator"><img style="padding-top:5px;" :src=imgUrl></div></el-col>
+            <el-col :span="2"><div class="user-avator">
+                  <el-image  style="margin-top:11px;margin-left:40px;width:50%;height:50%;":src="require('../assets/imgs/default_header.jpg')" fit="cover"></el-image></div></el-col>
             <el-col :span="2">
                 <el-dropdown @command="handleCommand" style="padding-top:15px;">
                     <span class="el-dropdown-link">{{username}}<i class="el-icon-arrow-down el-icon--right"></i></span>
@@ -299,7 +304,7 @@ export default {
 <style scoped>
 
     .header {
-        background: gray;
+        background: #006EFF ;
         position: absolute;
         top: 0;
         left: 0;
@@ -318,6 +323,16 @@ export default {
         background-color: grey;
         border: 2px solid white;
         color: white;
+    }
+    .el-button {
+        #background-color: #000;
+        padding-top:10px;
+        color:#fff
+    }
+    .el-button:hover {
+        #background-color: #000;
+        padding-top:10px;
+        color:DeepSkyBlue
     }
     /* .el-row{
         padding-top:20px;
