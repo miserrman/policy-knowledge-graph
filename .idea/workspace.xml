@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="edc9bb77-4720-435a-9444-664fc1a762a6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/code.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/code.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/policy/applyfor_extraction.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/front/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/assets/imgs/1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/imgs/1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/assets/imgs/2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/imgs/2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/assets/imgs/3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/imgs/3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/assets/imgs/4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/imgs/4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/components/header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/components/header.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -249,6 +241,8 @@
       <workItem from="1612573423138" duration="8585000" />
       <workItem from="1612616444434" duration="758000" />
       <workItem from="1612666619965" duration="11326000" />
+      <workItem from="1612684253811" duration="601000" />
+      <workItem from="1614388916047" duration="898000" />
     </task>
     <servers />
   </component>
@@ -278,6 +272,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
