@@ -153,7 +153,7 @@ def train_policy(data_x, data_y, epoches, batch_size, model=None):
     train_dataset = TensorDataset(X_train, Y_train)
     test_dataset = TensorDataset(X_test, Y_test)
     train_loader = DataLoader(dataset=train_dataset, batch_size=batch_size, shuffle=True, num_workers=2)
-    #定义损失函数和优化器
+    # 定义损失函数和优化器
     a
     for i in range(epoches):
         for step, (batch_x, batch_y) in enumerate(train_loader):

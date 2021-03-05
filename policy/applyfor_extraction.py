@@ -10,9 +10,9 @@ FQWtitle_location="data/policy_fujian.csv"
 LYtitle_location="data/policy_id.csv"
 LYcontent_location="data/policy_content.csv"
 FQWApplyFor="data/policy_applyfor.csv"
-w_location="data/result/policy_ApplyFor.csv"
+w_location="data/result/policy_applyfor_res.csv"
 def get_content(location,contents):
-     with open(location, 'r', encoding='utf-8') as csvfile:
+     with open(location, 'r', encoding='utf-8', newline='') as csvfile:
         reader = csv.DictReader(csvfile)
         for row in reader:
             contents.append(str(row['content']))
@@ -33,9 +33,9 @@ def cut_sentence(paragraph):
     return result
 
 def processingApplyFor(contents):
-    with open(w_location, 'w', encoding='utf-8') as csvfile:
+    with open(w_location, 'w', encoding='utf-8', newline='') as csvfile:
         w=csv.writer(csvfile)
-        w.writerow(['sentence','entity','compare','num'])
+        w.writerow(['num','sentence','entity','compare','num'])
         pattern1='[一二三四五六七八九零十]、'
         i=0
         j=0
@@ -45,13 +45,13 @@ def processingApplyFor(contents):
             paras = re.split(pattern1, content)#每段
             for para in paras:
                 for r in restrain:
-                    if para.find(r+'\n')>=0 or para.find(r+'：\n')>=0:#找到该段有条件要提取
+                    if para.find(r+'\n')>=0 or para.find(r+'：\n')>=0 or para.find(r+'　')>=0:#找到该段有条件要提取
                         para=re.sub(r'[\n]*[（(][一二三四五六七八九十]+[）)]', '', para)
                         para = re.sub(r'[\n]*[123456789]+\.', '', para)
                         for persentence in cut_sentence(para):
                             entity,compare,data= Dependency_Parsing(persentence)
-                            w.writerow([str(i)+'#'+persentence,"、".join(str(j) for j in entity),"、".join(str(j) for j in compare),"、".join(str(j) for j in data)])
-                            print('\n'+str(i)+'#'+persentence,entity,compare,data)
+                            w.writerow([str(i),persentence,"、".join(str(j) for j in entity),"、".join(str(j) for j in compare),"、".join(str(j) for j in data)])
+                            print('\n'+str(i),persentence,entity,compare,data)
             i=i+1
     csvfile.close()
 
