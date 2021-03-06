@@ -15,4 +15,7 @@ public interface PolicyTitleMapper {
 
     List<PolicyTitle> findAllPolicyTitle();
 
+    List<PolicyTitle> searchPolicyTitle(PolicyTitle policyTitle);
+
+    PolicyTitle findPolicyTitleById(Integer id);
 }

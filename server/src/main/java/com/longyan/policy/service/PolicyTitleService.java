@@ -25,4 +25,14 @@ public class PolicyTitleService {
             return policyTitleMapper.findPolicyTitleByType(type);
         }
     }
+
+    public List<PolicyTitle> searchPolicyTitle(PolicyTitle policyTitle) {
+        List<PolicyTitle> res = policyTitleMapper.searchPolicyTitle(policyTitle);
+        return res;
+    }
+
+    public PolicyTitle getPolicyTitleById(Integer id) {
+        PolicyTitle p = policyTitleMapper.findPolicyTitleById(id);
+        return p;
+    }
 }

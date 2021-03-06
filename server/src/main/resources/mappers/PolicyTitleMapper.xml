@@ -4,4 +4,29 @@
     <select id="findAllPolicyTitle" resultType="PolicyTitle">
         select id, title, depart, type, date, link from policy_title
     </select>
+
+    <select id="findPolicyTitleByType" resultType="PolicyTitle" parameterType="Integer">
+        select id, title, depart, type, date, link from policy_title
+        where type = #{type}
+    </select>
+
+    <select id="searchPolicyTitle" parameterType="PolicyTitle" resultType="PolicyTitle">
+        select id, title, depart, type, date, link from policy_title where
+        <trim suffixOverrides="and">
+            <if test="title!=null">
+                title like '%${title}%' and
+            </if>
+            <if test="depart!=null">
+                depart like '%${depart}%' and
+            </if>
+            <if test="type!=null">
+                type = #{type} and
+            </if>
+        </trim>
+    </select>
+
+    <select id="findPolicyTitleById" parameterType="Integer" resultType="PolicyTitle">
+        select id, title, depart, type, date, link from policy_title
+        where id = #{id}
+    </select>
 </mapper>

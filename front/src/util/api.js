@@ -1,4 +1,4 @@
-let serverApi = 'http://localhost:8081/'
+let serverApi = 'http://39.102.35.144:8081/'
 export default {
     getAllPolicyTitle: serverApi + 'policy/title/'
 }
