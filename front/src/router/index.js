@@ -31,6 +31,10 @@ import hostPage from '@/views/UserPage/hostPage'
 import otherUserShow from '@/views/OtherUser/OtheUserShow'
 import preLoad from '@/views/preLoad'
 import notFound from '@/views/404'
+import manage from '@/views/Manage/home'
+import managePolicy from '@/views/Manage/managePolicy'
+import manageUser from '@/views/Manage/manageUser'
+import manageWrite from '@/views/Manage/manageWrite'
 
 Vue.use(Router)
 
@@ -170,7 +174,7 @@ export default new Router({
       children:[
         {
           path:'/myAsk',
-          name:'我的提问',
+          name:'公司信息',
           component:myAsk
         }
       ]
@@ -261,6 +265,27 @@ export default new Router({
           path: '/otherUserStore',
           name: 'otherUserStore',
           component: otherUserStore
+        }
+      ]
+    },{
+      path: '/manage',
+      name: 'manage',
+      component: manage,
+      children: [
+        {
+          path: '/manage/managePolicy',
+          name: 'managePolicy',
+          component: managePolicy
+        },
+        {
+          path: '/manage/manageUser',
+          name: 'manageUser',
+          component: manageUser
+        },
+        {
+          path: 'manage/manageWrite',
+          name: 'manageWrite',
+          component: manageWrite
         }
       ]
     },{

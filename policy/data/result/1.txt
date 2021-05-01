@@ -1,0 +1,4 @@
+id,实体,type
+1,民营企业,organization
+1,福建,location
+

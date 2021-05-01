@@ -7,6 +7,21 @@ spring:
     username: root
     password: 123456
     initial-size: 5
+  data:
+    mongodb:
+      host: 39.102.35.144
+      port: 27017
+      database: policy
+      username: admin
+    neo4j:
+      uri: bolt://39.102.35.144:7687
+      username: neo4j
+      password: policy-123456
+  redis:
+    database: 0
+    host: 1.116.205.128
+    port: 6379
+    timeout: 1000
 
 mybatis:
   mapper-locations: classpath:mappers/*.xml
@@ -14,3 +29,10 @@ mybatis:
   configuration:
     map-underscore-to-camel-case: true
     auto-mapping-behavior: full
+
+thrift:
+  host: 1.116.205.128
+  port: 9000
+
+subscribe:
+  max-amount: 8

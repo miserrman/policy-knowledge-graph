@@ -54,7 +54,7 @@
               <el-image  style="margin-top:10px;width:100%;height:100%;":src="require('../assets/imgs/logo-name.png')" fit="cover"></el-image>
             </el-col>
 
-            <el-col :span="2" offset="1">
+            <el-col :span="1" offset="1">
               <!-- <el-button style="margin-top:10px; font-size:18px;" @click.native="gotoHome" type='text'>首页</el-button> -->
               <el-button size="mini" type="text" @click.native="gotoHome" style="padding-top:20px;font-size:100%;">首页</el-button>
             </el-col>
@@ -62,6 +62,10 @@
             <el-col :span="2">
                 <!-- <el-button style="margin-top:10px; font-size:18px;" @click.native="gotoHotlist" type='text'>热榜</el-button> -->
                 <el-button  type="text" @click.native="gotoHotlist" style="padding-top:20px;font-size:100%;">政策匹配</el-button>
+            </el-col>
+            <el-col :span="2" v-if="role==1">
+                <!-- <el-button style="margin-top:10px; font-size:18px;" @click.native="gotoHotlist" type='text'>热榜</el-button> -->
+                <el-button  type="text" @click.native="toManagePage" style="padding-top:20px;font-size:100%;">政策管理</el-button>
             </el-col>
             <el-col :span="4">
                 <!-- <el-input size="small " style="padding-top:10px;" v-model="search" placeholder="请输入你想要进行的查询">
@@ -83,7 +87,7 @@
                 </div>
             </el-col>
             <el-col :span="2"><div class="user-avator">
-                  <el-image  style="margin-top:11px;margin-left:40px;width:50%;height:50%;":src="require('../assets/imgs/default_header.jpg')" fit="cover"></el-image></div></el-col>
+                  <el-image  style="margin-top:11px;margin-left:40px;width:50%;height:50%;":src="require('../assets/img.jpg')" fit="cover"></el-image></div></el-col>
             <el-col :span="2">
                 <el-dropdown @command="handleCommand" style="padding-top:15px;">
                     <span class="el-dropdown-link">{{username}}<i class="el-icon-arrow-down el-icon--right"></i></span>
@@ -94,15 +98,6 @@
                     </el-dropdown-menu>
                 </el-dropdown>
             </el-col>
-            <el-col :span="2">
-                <div style="margin-top:18px;">
-                    <el-tooltip placement="bottom" effect="light">
-                        <div slot="content">初次注册账号获得100积分<br/><br/>每日登陆签到领取5积分<br><br>积分可通过回答问题获得<br/><br/>积分可用来悬赏问题</div>
-                        <i class="el-icon-coin"></i>
-                        <span>个人积分:{{scores}}</span>
-                    </el-tooltip>
-                </div>
-            </el-col>
         </el-row>
     </div>
 </template>
@@ -110,16 +105,19 @@
 <script>
 import questions from '../util/question'
 import search from '@/util/search'
+import api from '@/util/api'
+import axios from 'axios'
 const kindOptions = ['科学','数码','体育','时尚','影视','生活','游戏']
 export default {
     name:'header',
     data(){
             return{
+                role: 0,
                 search:'',
                 searchList:[],
                 searchItemList: [],
                 timeout:null,
-                message:this.$store.getters.getMessageNum,
+                message:0,
                 scores:this.$store.getters.getUserScore,
                 imgUrl:this.$store.getters.getHeaderPictureURL,
                 username:this.$store.getters.getUserName,
@@ -137,7 +135,6 @@ export default {
             }
     },
     mounted(){
-      console.log(this.$store.getters.getHeaderPictureURL)
         if(this.$store.getters.getHeaderPictureURL == "undefined")
           this.imgUrl = require('../assets/default_header.jpg')
         if(this.$store.getters.getIsComment == false)
@@ -148,8 +145,27 @@ export default {
             {"value":"印度阿三","Id":""},
             {"value":"古力娜扎","Id":""},
             {"value":"迪丽热巴","Id":""}]
+        //判断角色
+        if (this.$store.getters.getUserInfo || localStorage.getItem("role")) {
+            this.role = this.$store.getters.getUserInfo.role || localStorage.getItem("role")
+        }
+        this.getUserMessage()
     },
     methods:{
+        getUserMessage: function() {
+            let _this = this
+            axios.get(api.getUserMessage, {
+                headers: {
+                    userId: _this.$store.getters.getUserInfo.id || localStorage.getItem("userId")
+                }
+            }).then(function(response) {
+                if (response.data.data.unReadMessage)
+                    _this.message = response.data.data.unReadMessage.length
+            })
+        },
+        toManagePage: function() {
+            this.$router.push("/manage/manageUser")
+        },
         headerSearch: function(){
           // this.searchList = []
           // let _this = this
@@ -167,7 +183,7 @@ export default {
           // })
         },
         querySearch(queryString, cb){
-            var searchList = this.searchList
+            let searchList = this.searchList
             var results = queryString ? searchList.filter(this.createFilter(queryString)):searchList
             clearTimeout(this.timeout)
             this.timeout = setTimeout(()=>{
@@ -180,8 +196,8 @@ export default {
             }
         },
         handleSelect(item){
-            this.$store.commit('setSearchContent', item.value)
-            this.$router.push('/search')
+            this.$store.commit('setPolicyId', item.Id)
+            this.$router.push("/problemDetail")
         },
         handleCloseTag(tag){
             this.askForm.dynamicTags.splice(this.askForm.dynamicTags.indexOf(tag), 1);
@@ -282,19 +298,24 @@ export default {
     },
     watch: {
       search: function(){
-        this.searchList = []
         let _this = this
-        search.getSearchItem(this.search, function(searchList){
-          _this.searchItemList = searchList
-          _this.searchList = []
-          searchList.forEach(search=>{
-            let info = {
-              value: search.content,
-              id: ''
+        _this.searchList = []
+        axios.get(api.searchPolicyByTitle, {
+            params: {
+                title: _this.search
             }
-            _this.searchList.push(info)
-          })
-          console.log(_this.searchList)
+        }).then(function(response) {
+            let policies = response.data
+            console.log(_this.searchList)
+            for (let i = 0; i < policies.length; i++) {
+                let search = {
+                    "Id": policies[i].id,
+                    "value": policies[i].title
+                }
+                _this.searchList.push(search)
+            }
+        }).catch(function (err) {
+
         })
       }
     }

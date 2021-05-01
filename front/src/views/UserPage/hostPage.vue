@@ -1,28 +1,31 @@
 <template>
     <el-container>
-      <el-header>
         <el-card style="width: 60%;text-align: left;margin-top: 10px">
           <div class="user-info">
-            <img :src="user_header_src" style="margin-bottom: 20px;">
-            <div>
-              <span>{{userName}}</span>
-              <el-button style="float: right;position: relative;bottom: 10px" size="mini" @click="editDescribe">
-                <i v-if="!isEditDescribe" style="padding: 0;font-size: 12px;">编辑签名</i>
-                <i v-else style="padding: 0">确定</i>
-              </el-button>
-              <div v-if="!isEditDescribe">{{userDiscribe}}</div>
+            <img src="../../assets/img.jpg" style="margin-bottom: 20px;">
+            <div style="margin-left:20px">
+              <span class="user-name">{{userName}}</span>
+              <br/>
+              <br/>
+              <br/>
+              <span class="user-info">邮箱：{{email}}</span>
+              <br/>
+              <span class="user-info">电话：{{tel}}</span>
+              <!-- <div v-if="!isEditDescribe">{{userDiscribe}}</div>
               <div v-else>
                 <el-input v-model="describe" type="textarea"></el-input>
-              </div>
+              </div> -->
             </div>
           </div>
         </el-card>
-      </el-header>
-      <el-main>
+        <br/>
+        <br/>
+        <br/>
+      <!-- <el-main>
         <el-tabs style="margin-top:100px;width:60%" v-model="activeName">
           <el-tab-pane label="成就系统" name="first">
             <el-card style="width:30%">
-              <div>
+              <!-- <div>
                 <i class="el-icon-thumb"></i>
                 <span>获得{{approveCount}}次赞同</span>
               </div>
@@ -37,8 +40,8 @@
               <div>
                 <i class="el-icon-question"></i>
                 <span>提问了{{askCount}}问题</span>
-              </div>
-            </el-card>
+              </div> -->
+            <!-- </el-card>
           </el-tab-pane>
           <el-tab-pane label="签到系统" name="second">
             <el-button @click.native="signIn" type="primary" round>
@@ -47,7 +50,7 @@
             </el-button>
           </el-tab-pane>
         </el-tabs>
-      </el-main>
+      </el-main> -->
     </el-container>
 </template>
 
@@ -67,8 +70,10 @@
             approveCount:'30',
             answerCount:'20',
             askCount:'20',
-            userName: '',
-            userDiscribe: '像我这样优秀的人，本该灿烂过一生，怎么20多年到头来，还在人海里浮沉',
+            userName: this.$store.getters.getUserInfo.userName || localStorage.getItem("userName"),
+            email: this.$store.getters.getUserInfo.email || localStorage.getItem("email"),
+            tel: this.$store.getters.getUserInfo.tele || localStorage.getItem("tele"),
+            userDiscribe: '',
             user_header_src: '',
             isEditDescribe: false,
             describe: '',
@@ -76,14 +81,15 @@
           }
       },
       mounted() {
-          this.userName = this.$store.getters.getUserName
-          if(this.$store.getters.getUserDiscribe != "undefined")
-            this.userDiscribe = this.$store.getters.getUserDiscribe
-          this.loadAchieve()
-        this.user_header_src = this.$store.getters.getHeaderPictureURL
-        console.log(this.user_header_src)
-        if(this.user_header_src == 'undefined')
-          this.user_header_src = require('../../assets/default_header.jpg')
+        
+        //   this.userName = this.$store.getters.getUserName
+        //   if(this.$store.getters.getUserDiscribe != "undefined")
+        //     this.userDiscribe = this.$store.getters.getUserDiscribe
+        //   this.loadAchieve()
+        // this.user_header_src = this.$store.getters.getHeaderPictureURL
+        // console.log(this.user_header_src)
+        // if(this.user_header_src == 'undefined')
+        //   this.user_header_src = require('../../assets/default_header.jpg')
       },
       methods: {
           loadUserInfo: function () {
@@ -146,12 +152,13 @@
   .user-info div{
     float: left;
   }
-  .user-info div span{
-    font-size: 24px;
-    font-weight: bolder;
-    display: block;
-    margin: 15px;
-  }
+ .user-info {
+   font-size: 14px;
+ }
+ .user-name {
+   font-size: 25px;
+   font-weight: bolder;
+ }
   .user-info div div{
     font-size: 12px;
     margin-left: 20px;

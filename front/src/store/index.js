@@ -4,6 +4,8 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
   state: {
+    policyId: '',
+    userInfo: {},
     userID: '',
     userPassword: '',
     userEmail: '',
@@ -143,9 +145,25 @@ const store = new Vuex.Store({
         state.isArrowUp = window.sessionStorage.getItem('isArrowUp')
       }
       return state.isArrowUp
+    },
+    getPolicyId: function(state) {
+      if(!state.policyId) {
+        state.policyId = window.sessionStorage.getItem('policyId')
+      }
+      return state.policyId
+    },
+    getUserInfo: function(state) {
+      if (!state.userInfo) {
+        state.userInfo= window.sessionStorage.getItem('userInfo')
+      }
+      return state.userInfo
     }
   },
   mutations: {
+    setUserInfo: function(state, userInfo) {
+      window.sessionStorage.setItem('userInfo', userInfo)
+      state.userInfo = userInfo
+    },
     setMessageNum: function(state, messageNum){
       window.sessionStorage.setItem('messageNum', state.messageNum)
       state.messageNum = messageNum
@@ -233,6 +251,10 @@ const store = new Vuex.Store({
     setIsSign: function(state, isSign){
       window.sessionStorage.setItem('isSign', isSign)
       state.isSign = isSign
+    },
+    setPolicyId: function (state, policyId) {
+      window.sessionStorage.setItem('policyId', policyId)
+      state.policyId = policyId
     }
   }
 })

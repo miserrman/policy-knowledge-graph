@@ -7,9 +7,11 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import axios from 'axios'
 import store from './store'
+import echarts from 'echarts'
 // import NProgress from 'nprogress'
 // import 'nprogress/nprogress.css'
 
+Vue.prototype.$echarts = echarts
 Vue.prototype.$http = axios;
 Vue.use(ElementUI)
 Vue.config.productionTip = false
@@ -22,7 +24,14 @@ new Vue({
   components: { App },
   template: '<App/>'
 })
-
+router.beforeEach((to, from, next) => {
+  if (!localStorage.getItem("userInfo")) {
+    if (to.path !== '/login' && to.path != '/register') {
+        return next('/login')
+    }
+  }
+  next()
+})
 // router.beforeEach((to, from, next) => {
 //   NProgress.start()
 //   NProgress.set(0.1)

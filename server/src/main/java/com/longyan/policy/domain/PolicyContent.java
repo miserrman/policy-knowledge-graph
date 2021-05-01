@@ -1,8 +1,6 @@
-package com.longyan.policy.mongo;
+package com.longyan.policy.domain;
 import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.data.neo4j.core.schema.Id;
 
-@Document(collection = "policyContent")
 public class PolicyContent {
 
     private Integer policy_id;

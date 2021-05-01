@@ -14,6 +14,7 @@
           <el-input prefix-icon="el-icon-lock" autocomplete="off" placeholder="请再次输入密码" v-model="form.userPassword2" type="password" style="width:250px" clearable ></el-input>
         </el-form-item>
         <el-form-item>
+        
           <el-button type="primary" @click.native="register">注册</el-button>
           <el-button style="margin-left:30px" @click.native="backLogin" >返回</el-button>
         </el-form-item>
@@ -23,6 +24,8 @@
 </template>
 
 <script>
+  import api from '@/util/api'
+  import axios from 'axios'
   import log from '../util/log'
   export default {
     name:'register',
@@ -94,33 +97,15 @@
         }
         //   alert('已有用户名')
       },
-      async register(){
-        // let j = await log.doubleNameAlert(this.form.userName)
-        //   if(!j){
-        //   this.$message({
-        //     showClose:true,
-        //     message:'已存在用户名',
-        //     type:'warning'
-        //   })
-        // }
-        // else
-          if(this.form.userPassword===this.form.userPassword2){
-            log.register(this.form.userName, this.form.userPassword);
-            this.$message({
-              showClose:true,
-              message:'注册成功',
-              type:'success'
-            })
-            this.$router.push('/login')
-        }
-        else{
-            this.$message({
-              showClose: true,
-              message: '两次密码不一致',
-              type: 'error'
-            });
-        }
-      }
+       register: function(){
+         console.log(this.form.userName)
+         const _this = this
+         axios.post(api.register, {
+            userName: _this.form.userName,
+            password: _this.form.userPassword,
+            role: 0
+         })
+       }
     }
   }
 </script>

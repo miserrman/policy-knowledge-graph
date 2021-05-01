@@ -116,6 +116,3 @@ def insert_policy_title(path, data: pd.DataFrame):
             fp.write('\n')
 
 
-data = pd.read_csv('../data/policy_fujian.csv', header=0)
-insert_policy_title('../data/scheme.txt', data)
-

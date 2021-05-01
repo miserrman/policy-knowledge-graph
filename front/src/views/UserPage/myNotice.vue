@@ -69,6 +69,8 @@
 
 <script>
   import message from '@/util/message'
+  import axios from 'axios'
+  import api from '@/util/api'
 export default {
     name:'myNotice',
     data(){
@@ -98,29 +100,31 @@ export default {
     },
     methods: {
       loadMessagesList: function(){
+        let _this = this
         this.unread = []
         this.read = []
         this.recycle = []
         this.docu = []
-        const _this = this
-        message.getAllMessages(this.$store.getters.getUserID, function(messages){
-          _this.messageList = messages.slice()
-          messages.forEach(mes=>{
-            let info = {
-              date: '',
-              title: mes.content
+        axios.get(api.getUserMessage, {
+            headers: {
+                userId: _this.$store.getters.getUserInfo.id || localStorage.getItem("userId")
             }
-            let time = new Date(mes.processing_time)
-            info.date = time.toLocaleString()
-            if(mes.read_status == 0)
-              _this.unread.push(info);
-            else if(mes.read_status == 1)
-              _this.read.push(info)
-            else{
-              _this.recycle.push(info)
+        }).then(function(response) {
+            let data = response.data.data
+            for (let i = 0; data.unReadMessage && i < data.unReadMessage.length; i++) {
+                let info = {
+                    title: data.unReadMessage[i].title,
+                    date: data.unReadMessage[i].date
+                }
+                _this.unread.push(info)
             }
-            _this.docu.push(info)
-          })
+            for (let i = 0; data.readMessage && i < data.readMessage.length; i++) {
+                let info = {
+                    title: data.readMessage[i].title,
+                    date: data.readMessage[i].date
+                }
+                _this.read.push(info)
+            }
         })
       },
       handleRead(index) {

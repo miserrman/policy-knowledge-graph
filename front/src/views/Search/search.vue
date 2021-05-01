@@ -5,84 +5,60 @@
                          :trigger-on-focus="false" @select="handleSelect" @keyup.native="headerSearch">
             <el-button @click.native="gotoSearch" slot="append" icon="el-icon-search"></el-button>
         </el-autocomplete>
-        <div style="margin-top:10px;margin: 0 auto;width: 500px;">
+        <div style="margin-top:10px;margin:0 auto;width: 700px;">
             <!-- <el-button style="margin-left:20px;" type="text">相关</el-button> -->
-            <a style="font-size:20px; margin-left:20px;color:grey">相关</a>
+            <a style="font-size:12px; margin-left:20px;color:grey">相关</a>
             <el-button style="margin-left:20px;" type="text" @click.native="showFilter">
                 <span>筛选</span>
                 <i v-if="isArrowUp" class="el-icon-arrow-up"></i>
                 <i v-else class="el-icon-arrow-down"></i>
             </el-button>
-            <el-card v-if="!isArrowUp" style="width:500px;">
-                <el-form label-width="80px">
-                    <el-form-item label="日期">
-                        <el-radio-group v-model="filterTime">
-                            <el-radio :label="0">全部</el-radio>
-                            <el-radio :label="1">一周内</el-radio>
-                            <el-radio :label="2">一月内</el-radio>
-                            <el-radio :label="3">一年内</el-radio>
-                        </el-radio-group>
-                    </el-form-item>
-                    <el-form-item label="内容">
-                        <el-radio-group v-model='content'>
-                            <el-radio :label="0">全部</el-radio>
-                            <el-radio :label="1">只看问题</el-radio>
-                            <el-radio :label="2">只看答案</el-radio>
-                        </el-radio-group>
-                    </el-form-item>
-                    <el-form-item label="分类">
-                        <el-radio-group v-model='kind'>
-                            <el-radio :label="0">全部</el-radio>
-                            <el-radio :label="1">科学</el-radio>
-                            <el-radio :label="2">数码</el-radio>
-                            <el-radio :label="3">体育</el-radio>
-                            <el-radio :label="4">时尚</el-radio>
-                            <el-radio :label="5">影视</el-radio>
-                            <el-radio :label="6">生活</el-radio>
-                            <el-radio :label="7">游戏</el-radio>
-                        </el-radio-group>
-                    </el-form-item>
-                    <el-form-item label="标签">
-                        <el-radio-group v-model="tag">
-                            <el-radio :label="0">全部</el-radio>
-                            <el-radio v-for="(tag,index) in tags" :label="index + 1">{{tag}}</el-radio>
-                        </el-radio-group>
-                    </el-form-item>
-                </el-form>
-            </el-card>
-            <el-card @dblclick.native="gotoDetail(index)" style="width:600px;margin:5px auto" v-for="(info, index) in questions">
-                <el-container>
-                    <el-header>
-                        <span style="float:right;font-size:12px;">{{info.question.question_time}}</span>
-                        <img class="imgpos" style="float:left" :src="info.header_picture">
-                        <b style="margin-left:30px">Author: {{info.user.userName}}</b>
-                        <span style="margin-left:20px;">悬赏积分：{{info.question.integral}}</span>
-                        <br/>
-                        <el-tag size="small" style="margin-left:30px;margin-top:10px;" v-for="tag in info.question.label_m">{{tag}}</el-tag>
-                    </el-header>
-                    <el-main>
-                        <span>
-                          {{info.question.question}}
-                        </span>
-                    </el-main>
-                </el-container>
-            </el-card>
-            <el-card  style="width:600px;margin:5px auto" v-for="info in answers">
-                <el-container>
-                    <el-header>
-                        <span style="float:right">{{info.answer.answer_time}}</span>
-                        <img class="imgpos" style="float:left" :src="info.header_picture">
-                        <b style="margin-left:30px">{{info.user.userName}}</b>
-                        <br/>
-                        <el-tag size="small" style="margin-left:30px;margin-top:10px;" v-for="tag in searchTags">{{tag}}</el-tag>
-                    </el-header>
-                    <el-main>
-                      <div v-html="info.answer.answer">
-                        {{info.answer.answer}}
-                      </div>
-                    </el-main>
-                </el-container>
-            </el-card>
+            <div v-if="!isArrowUp" style="width:700px; margin-bottom:30px">
+              <el-form :inline="true" class="demo-form-inline">
+  <el-form-item label="发布部门">
+                    <el-select placeholder="选择层级" v-model="form.depart.level" style="width:100px;margin-right:20px;margin-left:20px" size="mini" @change="changeCountry">
+                      <el-option label="国家级" value="0"></el-option>
+                      <el-option label="省市级" value="1"></el-option>
+                      <el-option label="地区级" value="2"></el-option>
+                    </el-select>
+                    <el-select :disabled="departDisabled" placeholder="选择地区" size="mini" v-model="form.depart.region" style="width:150px;margin-right:20px" @change="changeRegion">
+                      <el-option v-for="(region, index) in regionList" :label="regionList[index]" :value="regionList[index]"></el-option>
+                    </el-select>
+                    <el-select placeholder="选择部门" size="mini" v-model="form.depart.name" style="width:300px">
+                      <el-option v-for="(depart, index) in departList" :label="departList[index]" :value="departList[index]"></el-option>
+                    </el-select>
+                </el-form-item>
+ <el-form-item label="发布时间" style="width:800px">
+    <el-date-picker type="date" placeholder="起始日期" size="small" style="width:120px" v-model="form.startTime"></el-date-picker>
+    <span>&nbsp;&nbsp;&nbsp;--&nbsp;&nbsp;&nbsp;</span>
+    <el-date-picker placeholder="结束日期" v-model="form.endTime" size="small"  style="width:130px"></el-date-picker>
+ </el-form-item>
+              </el-form>
+            </div>
+            <el-card @click.native="policyDetail(index)" v-for="(policy,index) in policyViewList" style="text-align:left;width:700px;margin:0 auto">
+      <div class="card-detail">
+        <img :src="imgList[index]">
+        <span class="policy-title">{{policy.title}}</span>
+        <br/>
+        <br/>
+        <span class="policy-title-info">政策部门：{{policy.depart}}</span>
+      <br/>
+      <span class="policy-title-info">发布时间：{{policy.date}}</span>
+        <!--        <div class="question-detail">-->
+        <!--          <span>{{question.hostQuestion.answer}}</span>-->
+        <!--        </div>-->
+      </div>
+      <br/>
+      <div class="card-footer">
+        <el-button size="mini" icon="el-icon-caret-top" style="margin-top: 10px">政策热度</el-button>
+    <el-button icon="el-icon-edit" size="mini" type="text" style="margin-left: 100px" @click="gotoProblemDetail(index)">添加回答</el-button>
+    <el-button icon="el-icon-position" size="mini" type="text" style="margin-left: 30px">分享</el-button>
+    <el-button icon="el-icon-view" size="mini" type="text" @click="watchQuestion(index)">
+      <span>关注</span>
+    </el-button>
+  </div>
+  </el-card>
+
             <!-- <el-card v-for="question in questions" >
 
             </el-card>
@@ -90,13 +66,21 @@
 
             </el-card> -->
         </div>
+    <el-pagination style="text-align:center" v-if="policyList.length> pageCount"
+            @current-change="pageViewChange"
+            layout="prev, pager, next"
+            :page-count="pageTotal">
+    </el-pagination>
     </div>
 </template>
 
 <script>
 import Header from '@/components/header'
+import filterPolicy from '@/components/filter'
 const kindOptions = ['全部','科学','数码','体育','时尚','影视','生活','游戏']
 import search from '@/util/search'
+import api from '@/util/api'
+import axios from 'axios'
 import question from '@/util/question'
 import answer from '@/util/answer'
 import user from "@/util/user";
@@ -104,10 +88,24 @@ import user from "@/util/user";
 export default {
     name:'search',
     components:{
-        Header
+        Header, filterPolicy
     },
     data(){
         return{
+            form: {
+              depart: {
+                level: "",
+                region: "",
+                name: ""
+              },
+              startTime: "",
+              endTime: ""
+            },
+            allDepartData: [],
+            allRegionData: [],
+            departList: [],
+            regionList: [],
+            pageCount: 10,
             filterTime:0,
             isArrowUp:true,
             content:0,
@@ -124,7 +122,11 @@ export default {
             search: '',
             searchList: [],
             tempQuestions: [],
-            tempAnswers: []
+            tempAnswers: [],
+            policyList: [],
+            policyViewList: [],
+            imgList: [],
+            departDisabled: false
         }
     },
     mounted(){
@@ -134,73 +136,88 @@ export default {
         // this.tag = this.$store.getters.filterTag
       this.searchList = []
       this.loadSearch()
+      this.policyDepartInit()
     },
     methods:{
+       changeCountry: function() {
+            this.departList = []
+            if (this.form.depart.level == 0) {
+              this.departDisabled = true
+              for (let i = 0; i < this.allDepartData.length; i++) {
+                if (this.allDepartData[i].level == 0)
+                  this.departList.push(this.allDepartData[i].name)
+              }
+            }
+            else if (this.form.depart.level == 1) {
+              this.regionList = []
+              this.departDisabled = false
+              for (let i = 0; i < this.allRegionData.length; i++) {
+                this.regionList = this.allRegionData
+              }
+              this.regionList.push("广东省")
+            }
+          },
+          changeRegion: function() {
+            this.departList = []
+            for (let i = 0; i < this.allDepartData.length; i++) {
+              if (this.allDepartData[i].region == this.form.depart.region)
+                this.departList.push(this.allDepartData[i].name)
+            }
+            console.log(this.allDepartData)
+          },
+        policyDepartInit: function() {
+          let _this = this
+          axios.get(api.getPolicyCreateInfo, {}).then(function(response) {
+              let data = response.data.data
+              _this.allDepartData = data.departs
+              _this.allRegionData = data.regions             
+          })
+        },
+        policyDetail: function(index) {
+          this.$store.commit('setPolicyId', this.policyList[index].id)
+          this.$router.push("/problemDetail")
+        },
         loadSearch: function(){
           const _this = this
-          this.tempQuestions = []
-          this.tempAnswers = []
-          this.questions = []
-          this.answers = []
-          search.getSearchItem(this.$store.getters.getSearchContent, function(searchItemList){
-            searchItemList.forEach(search=>{
-              if(search.type == 0){
-                question.getTheQuestion(search.iD, function(q){
-                  user.getUserInfo(q.user_id, function(u){
-                    user.getOtherDiscribe(u.user_id, function(discribe){
-                      let info = {
-                        question: q,
-                        user: u,
-                        header_picture: ''
-                      }
-                        let time = new Date(info.question.question_time)
-                        info.question.question_time = time.toLocaleString()
-                        let str = new String(info.question.label_m)
-                        info.question.label_m = str.split(',')
-                        info.header_picture = require('../../assets/img.jpg')
-                        if(discribe != undefined && discribe.header_picture != null)
-                          info.header_picture = discribe.header_picture
-                      _this.questions.push(info)
-                      _this.tempQuestions.push(info)
-                    })
-                  })
-                 })
+          let departId = null
+          if (this.form.depart.name != "") {
+            for (let i = 0; i < this.departList.length; i++) {
+              if (this.departList[i] == this.form.depart.name) {
+                departId = this.departList[i].id
               }
-              else{
-                answer.getAnswer(search.iD, function(ans){
-                  question.getTheQuestion(ans.question_id, function(ques){
-                    user.getUserInfo(ans.answer_user, function(u){
-                      user.getOtherDiscribe(u.user_id, function(discribe){
-                        let info = {
-                          answer: ans,
-                          user: u,
-                          header_picture: '',
-                          question: ques
-                        }
-                        info.header_picture = require('../../assets/img.jpg')
-                        let time = new Date(info.answer.answer_time)
-                        info.answer.answer_time = time.toLocaleString()
-                        if(discribe != null)
-                          info.header_picture = discribe.header_picture
-                        _this.answers.push(info)
-                        _this.tempAnswers.push(info)
-                      })
-                    })
-                  })
-                })
-              }
-            })
+            }
+          }
+          let startDate = null
+          if (this.form.startTime != "")
+            startDate = this.form.startTime
+          let endDate = null
+          if (this.form.endTime != "")
+            endDate = this.form.endTime
+          this.search = _this.$store.getters.getSearchContent
+          console.log(startDate)
+          axios.get(api.searchPolicyByTitle, {
+            params: {
+              title: _this.$store.getters.getSearchContent,
+              departId: departId,
+              startDate: startDate,
+              endDate: endDate
+            }
+          }).then(function(response) {
+            _this.policyList = response.data
+            let t = Math.floor(_this.policyList.length / _this.pageCount)
+            if (_this.policyList.length % _this.pageCount > 0) {
+              t += 1
+            }
+            _this.pageTotal = t
+            _this.pageViewChange(1)
           })
         },
         showFilter:function(){
             this.isArrowUp = !this.isArrowUp
         },
       handleSelect: function(item){
-          this.search = item.value
-          this.$store.commit('setSearchContent', item.value)
-          this.questions = []
-          this.answers = []
-          this.loadSearch()
+          this.$store.commit('setPolicyId', item.Id)
+          this.$router.push("/problemDetail")
       },
       querySearch(queryString, cb){
         var searchList = this.searchList
@@ -229,6 +246,33 @@ export default {
         //   })
         // })
       },
+      pageViewChange: function(currentPage) {
+          this.policyViewList = []
+          let start = (currentPage - 1) * this.pageCount
+          for (let i = start; i < Math.min(start + this.pageCount, this.policyList.length); i++) {
+            this.policyViewList.push(this.policyList[i])
+          }
+          this.imgList = []
+          for (let i = 0; i < this.policyViewList.length; i++) {
+              let random = parseInt(Math.random() * 5) + 1
+              if (random == 1) {
+                console.log("sdcsdcsdcsdc")
+                this.imgList.push(require("@/assets/home/1.jpg"))
+              }
+              else if (random == 2) {
+                this.imgList.push(require("@/assets/home/2.jpg"))
+              }
+              else if (random == 3) {
+                this.imgList.push(require("@/assets/home/3.jpg"))
+              }
+              else if (random == 4) {
+                this.imgList.push(require("@/assets/home/4.jpg"))
+              }
+              else if (random == 5) {
+                this.imgList.push(require("@/assets/home/5.jpg"))
+              }
+            }
+        },
       gotoDetail:function(index){
         this.$store.commit('setQuestionID', this.questions[index].question.question_id)
         this.$router.push('/problemDetail')
@@ -253,32 +297,25 @@ export default {
       }
     },
     watch: {
-      isArrowUp: function (newVal, oldVal) {
-        this.$store.commit('isArrowUp', newVal)
-      },
-      content: function (newVal, oldVal) {
-        if (newVal == 1) {
-          this.answers = []
-          this.questions = this.tempQuestions.slice()
-        } else if (newVal == 2) {
-          this.questions = []
-          this.answers = this.tempAnswers.slice()
-        } else {
-          this.loadSearch()
-        }
-      },
       search: function(){
         let _this = this
-        search.getSearchItem(this.search, function(searchList){
-          _this.searchItemList = searchList
-          _this.searchList = []
-          searchList.forEach(search=>{
-            let info = {
-              value: search.content,
-              id: ''
+        _this.searchList = []
+        axios.get(api.searchPolicyByTitle, {
+            params: {
+                title: _this.search
             }
-            _this.searchList.push(info)
-          })
+        }).then(function(response) {
+            let policies = response.data
+
+            for (let i = 0; i < policies.length; i++) {
+                let search = {
+                    "Id": policies[i].id,
+                    "value": policies[i].title
+                }
+                _this.searchList.push(search)
+            }
+        }).catch(function (err) {
+
         })
       },
       kind: function (newVal, oldVal) {
@@ -342,8 +379,13 @@ export default {
 </script>
 
 <style scoped>
+.policy-title-info {
+    margin-top: 30px;
+    font-size: 14px;
+    color: rgb(160, 163, 166);
+  }
 .el-button{
-    font-size: 20px;
+    font-size: 12px;
     color: grey;
 }
 .imgpos{
@@ -351,5 +393,24 @@ export default {
     width: 60px;
     height: 60px;
 }
+  .card-detail img{
+    width: 25%;
+    margin-right: 30px;
+    float: left;
+    height: 100px;
+  }
+
+.card-footer{
+    margin-bottom: 10px;
+    margin-left: 10px;
+    width: 600px;
+    float: left;
+  }
+  .el-footer .el-button{
+    float: right;
+  }
+   .policy-title{
+    font-weight: bolder;
+  }
 </style>
 

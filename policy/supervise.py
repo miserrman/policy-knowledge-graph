@@ -34,6 +34,7 @@ ENTITY_TYPE_MAP = {
     'Person': 6
 }
 
+
 def init_train_test_data(path):
     """
     提取所有标注的数据，格式为字典 {para(原话):"", ([(实体，类型)])}
@@ -140,29 +141,49 @@ def word2vector(dict_list, train_data, emb_size=30):
         for char in words:
             vector_list = model.wv[char]
             r += list(vector_list)
-        for i in range(len(r), max_length):
+        for i in range(len(r), max_length * emb_size):
             r.append(0.0)
         word2_result.append(r)
-    return word2_result
+    return torch.tensor(word2_result, dtype=torch.float32)
 
+
+def accracy_score(y_pred, y):
+    acc_num = 0.0
+    length = y_pred.shape[0]
+    for i in range(length):
+        acc_num += (y_pred.argmax(dim=1) == y).float().sum().item()
+    return acc_num / length
 
 def train_policy(data_x, data_y, epoches, batch_size, model=None):
     X_train, X_test, Y_train, Y_test = train_test_split(data_x, data_y, test_size=0.1, random_state=0)
     X_train = word2vector(X_train, data_x)
     X_test = word2vector(X_test, data_x)
+    Y_train = torch.tensor(Y_train, dtype=torch.float32)
+    Y_test = torch.tensor(Y_test, dtype=torch.long)
     train_dataset = TensorDataset(X_train, Y_train)
     test_dataset = TensorDataset(X_test, Y_test)
     train_loader = DataLoader(dataset=train_dataset, batch_size=batch_size, shuffle=True, num_workers=2)
     # 定义损失函数和优化器
-    a
+    rnn = RNN(3000, 64, 1, 100)
+    optimizer = torch.optim.Adam(rnn.parameters(), lr=0.01)
+    loss_func = nn.MSELoss()
     for i in range(epoches):
         for step, (batch_x, batch_y) in enumerate(train_loader):
+            output = rnn(batch_x.view(-1, 1, 3000))
+            loss = loss_func(output, batch_y)
+            optimizer.zero_grad()
+            loss.backward()
+            optimizer.step()
+            if step % 50 == 0:
+                test_output = rnn(X_test.view(-1, 1, 3000))
+                acc = accracy_score(test_output.view(100, -1), Y_test.view(-1, 100))
+                print('Epoch: %d' % i, 'train loss %.3f' % loss.data.numpy(), 'test acc %.3f' % (acc))
 
 
 if __name__ == '__main__':
     data = init_train_test_data('data/policy_fujian_content.txt') #初始化训练数据，从文章提取所有训练数据
     # print("############成功提取所有数据###############")
     label = make_label(data)
-    train_policy(data, label)
+    train_policy(data, label, 5, 32)
 
 

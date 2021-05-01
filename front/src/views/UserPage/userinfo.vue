@@ -46,9 +46,9 @@ export default {
   data(){
         return{
             info:{
-                name: this.$store.getters.getUserName,
-                email:this.$store.getters.getUserEmail,
-                tel: this.$store.getters.getUserTel,
+                name: this.$store.getters.getUserInfo.userName,
+                email:this.$store.getters.getUserInfo.email,
+                tel: this.$store.getters.getUserInfo.tele,
             },
             radio:'1',
           imageUrl: ''

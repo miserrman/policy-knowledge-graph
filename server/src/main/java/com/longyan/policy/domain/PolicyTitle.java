@@ -8,11 +8,15 @@ public class PolicyTitle {
 
     private String depart;
 
+    private Integer departId;
+
     private Integer type;
 
     private String date;
 
     private String link;
+
+    private Integer score = 0; //排序的时候使用，并不是数据库属性
 
     public Integer getId() {
         return id;
@@ -24,6 +28,14 @@ public class PolicyTitle {
 
     public String getTitle() {
         return title;
+    }
+
+    public Integer getDepartId() {
+        return departId;
+    }
+
+    public void setDepartId(Integer departId) {
+        this.departId = departId;
     }
 
     public void setTitle(String title) {
@@ -60,5 +72,13 @@ public class PolicyTitle {
 
     public void setLink(String link) {
         this.link = link;
+    }
+
+    public Integer getScore() {
+        return score;
+    }
+
+    public void setScore(Integer score) {
+        this.score = score;
     }
 }

@@ -7,6 +7,7 @@ from apriori import *
 from pyhanlp import HanLP
 import regex
 import policy_util
+import json
 from sklearn import feature_extraction
 from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.feature_extraction.text import CountVectorizer
@@ -204,10 +205,36 @@ def dependency_analysis(sent):
     return res
 
 
+def condition_extract(data):
+    json_res = []
+    for index, row in data.iterrows():
+        content = row['content']
+        paras = policy_util.cut_sentence(content)
+        res = []
+        for para in paras:
+            if re.search(r"\d+%|\d+.*元|\d+天|\d+工作日", para):
+                res.append(para)
+        conditions = '|'.join(res)
+        print(index)
+        print(conditions)
+        r = {
+            'policy_id': index + 1,
+            'content': str(row['content_html']),
+            'condition': conditions
+        }
+        json_res.append(json.dumps(r, ensure_ascii=False))
+    with open("data/policy_content.json", 'w', encoding='utf-8') as fp:
+        for j in json_res:
+            fp.write(j + '\n')
+
+
+
 if __name__ == '__main__':
-    # content = pd.read_csv('data/policy_content.csv', header=0)
+    content = pd.read_csv('./data/policy_fujian_content.csv', header=0)
     # entity_recognition(content)#使用关联分析方法分析
     # data = pd.read_csv('data/policy_fujian.csv', header=0)
     # extract_special_policy(data)#使用依存关系分析标题
-    data = pd.read_csv('data/policy_fujian_content.csv', header=0)
-    extract_high_rate_word(data, 0.2)
+    # data = pd.read_csv('data/policy_fujian_content.csv', header=0)
+    # extract_high_rate_word(data, 0.2)
+    condition_extract(content)
+

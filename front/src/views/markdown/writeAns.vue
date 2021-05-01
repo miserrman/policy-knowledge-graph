@@ -3,10 +3,27 @@
   <div class="note-area">
     <Header></Header>
     <div style="margin-top: 100px;">
-      <el-row>
-        <el-col :span="5"><span>写文章</span></el-col>
-        <el-col :span="6"><el-button @click.native="commitAnswer" size="mini" primary>提交</el-button></el-col>
-      </el-row>
+      <div style="margin:0 auto;width:800px">
+        <el-form ref="form" model="form" label-width="80px">
+          <el-form-item label="政策标题">
+          <el-input style="width:400px"></el-input>
+        </el-form-item>
+        </el-form>
+        <el-form ref="form" model="form" label-width="80px" inline="true">
+         <el-form-item label="政策层级">
+    <el-select placeholder="政策层级" style="width:200px">
+      <el-option label="国家级" value="shanghai"></el-option>
+      <el-option label="省级" value="beijing"></el-option>
+    </el-select>
+  </el-form-item>
+  <el-form-item label="政策部门" style="width:400px">
+    <el-select placeholder="政策部门">
+      <el-option label="福建省工业信息部门" value="shanghai"></el-option>
+      <el-option label="福建省人民政府" value="beijing"></el-option>
+    </el-select>
+  </el-form-item>
+        </el-form>
+      </div>
       <quill-editor v-model="content"
                     ref="myQuillEditor"
                     :options="editorOption"

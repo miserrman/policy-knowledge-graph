@@ -79,6 +79,7 @@ def load_article_content(path, write_path):
                 text = r.text
                 soup = BeautifulSoup(text)
                 content_list = soup.findAll(name='span', attrs={'style': 'font-family:微软雅黑;'})
+                content_html = [str(h) for h in content_list]
                 res = ""
                 if not content_list:
                     paras = soup.findAll(name='p')
@@ -90,18 +91,19 @@ def load_article_content(path, write_path):
                 res = re.sub('<.+>', '', res)
                 d = {
                     'title': row['title'],
-                    'content': res if res else '空'
+                    'content': res if res else '空',
+                    'content_html': '|'.join(content_html)
                 }
                 result.append(d)
             except requests.exceptions.ConnectionError as e:
                 d = {
                     'title': row['title'],
-                    'content': '空'
+                    'content': '空',
+                    'content_html': '空'
                 }
                 result.append(d)
             print(d)
     return result
-
 
 
 def load_html(url, params=None):
@@ -221,7 +223,7 @@ def create_policy_content_chart(policy_chart):
 if __name__ == '__main__':
     # result = load_html(FUJIAN_UNIFORM_POLICY_NET)
     # write_csv(result, 'data/policy_fujian.csv')
-    load_clear_info('data/policy_fujian.csv')
-    # result = load_article_content('data/policy_fujian.csv', 'data/policy_fujian_content.csv.txt')
-    # policy_util.write_csv(result, 'data/policy_fujian_content.csv')
+    # load_clear_info('data/policy_fujian.csv')
+    result = load_article_content('data/policy_fujian.csv', 'data/policy_fujian_content.csv')
+    policy_util.write_csv(result, 'data/policy_fujian_content.csv')
     # get_text('data/policy_fujian_content.csv', 'data/policy_fujian_content.txt')

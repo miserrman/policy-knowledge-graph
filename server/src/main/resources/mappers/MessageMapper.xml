@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.longyan.policy.mapper.MessageMapper">
+
+    <select id="findUserMessage" resultType="Message" parameterType="Integer">
+        select id,policy_ids,message,is_read,user_id
+        from message
+        where user_id=#{userId}
+    </select>
+
+    <insert id="insertUserMessage" parameterType="Message" useGeneratedKeys="true" keyProperty="id">
+        insert into message(policy_ids,message,is_read,user_id)
+        values(#{policyIds},#{message},#{isRead},#{userId})
+    </insert>
+
+    <update id="updateUserMessage" parameterType="Message">
+        update message
+        <trim suffixOverrides="," prefix="set">
+            policy_ids=#{policyIds},
+            is_read=#{isRead},
+        </trim>
+        where id=#{id}
+    </update>
+
+</mapper>

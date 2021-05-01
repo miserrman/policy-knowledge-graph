@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.longyan.policy.mapper.SubscribeMapper">
+
+    <insert id="insertSubscribe" useGeneratedKeys="true" keyProperty="id">
+        insert into subscribe(user_id,depart_ids,regions,organization,scale,industry,keywords,mate)
+        values (#{userId},#{departIds},#{regions},#{organization},#{scale},#{industry},#{keywords},#{mate})
+    </insert>
+
+    <select id="findUserSubscribe" parameterType="Integer" resultType="Subscribe">
+        select id,user_id,depart_ids,regions,organization,scale,industry,keywords,mate
+        from subscribe
+        where
+        user_id=#{userId} and (select id from user where id=#{userId}) is not null
+    </select>
+
+    <update id="updateUserSubscribe" parameterType="Subscribe">
+        update subscribe
+        <trim prefix="set" suffixOverrides=",">
+            <if test="departIds!=null">depart_ids=#{departIds},</if>
+            <if test="regions!=null">regions=#{regions},</if>
+            <if test="organization!=null">organization=#{organization},</if>
+            <if test="scale!=null">scale=#{scale},</if>
+            <if test="industry!=null">industry=#{industry},</if>
+            <if test="keywords!=null">keywords=#{keywords},</if>
+            <if test="mate!=null">mate=#{mate},</if>
+        </trim>
+    where user_id=#{userId}
+    </update>
+
+</mapper>

@@ -1,32 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.longyan.policy.mapper.PolicyTitleMapper">
-    <select id="findAllPolicyTitle" resultType="PolicyTitle">
-        select id, title, depart, type, date, link from policy_title
+
+    <insert id="insertPolicyTitle" useGeneratedKeys="true" keyProperty="id" parameterType="PolicyTitle">
+        insert into policy_title(title,depart_id,date,link)
+        values (#{title}, #{departId},#{date},#{link})
+    </insert>
+    <select id="findAllPolicyTitle" resultType="com.longyan.policy.domain.PolicyTitle" parameterType="Integer">
+        select t.id, t.title, t.depart_id, d.name as depart, t.type, t.date, t.link
+        from policy_title t inner join policy_depart d
+        on t.depart_id=d.id
     </select>
 
-    <select id="findPolicyTitleByType" resultType="PolicyTitle" parameterType="Integer">
-        select id, title, depart, type, date, link from policy_title
-        where type = #{type}
+    <select id="findPolicyTitleByType" resultType="com.longyan.policy.domain.PolicyTitle" parameterType="Integer">
+        select t.id, t.title, t.depart_id, d.name as depart, t.type, t.date, t.link
+        from policy_title t inner join policy_depart d
+        on t.depart_id=d.id
     </select>
 
-    <select id="searchPolicyTitle" parameterType="PolicyTitle" resultType="PolicyTitle">
-        select id, title, depart, type, date, link from policy_title where
+    <select id="findAllPolicyTitles" resultType="com.longyan.policy.domain.PolicyTitle">
+        select t.id,t.title,t.depart_id,d.name as depart,t.type,t.date,t.link
+        from policy_title t inner join policy_depart d
+        on t.depart_id=d.id
+        limit ${(page) * limit},${limit}
+    </select>
+
+    <select id="searchPolicyTitle" parameterType="com.longyan.policy.domain.PolicyTitle" resultType="PolicyTitle">
+        select t.id, t.title, t.depart_id, d.name as depart, t.type, t.date, t.link
+        from policy_title t inner join policy_depart d
+        on t.depart_id=d.id
+        where
         <trim suffixOverrides="and">
             <if test="title!=null">
                 title like '%${title}%' and
             </if>
-            <if test="depart!=null">
-                depart like '%${depart}%' and
-            </if>
             <if test="type!=null">
                 type = #{type} and
+            </if>
+            <if test="departId!=null">
+                depart_id = #{departId} and
             </if>
         </trim>
     </select>
 
-    <select id="findPolicyTitleById" parameterType="Integer" resultType="PolicyTitle">
-        select id, title, depart, type, date, link from policy_title
-        where id = #{id}
+    <select id="findPolicyTitleById" parameterType="Integer" resultType="com.longyan.policy.domain.PolicyTitle">
+        select t.id, t.title, t.depart_id, d.name as depart,t.type, t.date, t.link
+        from policy_title t inner join policy_depart d
+        on t.depart_id=d.id
+        where t.id = #{id}
     </select>
+
+    <select id="findUserSubscribePolicy" parameterType="Integer" resultType="com.longyan.policy.domain.PolicyTitle">
+        select c.id,c.title,c.depart_id,d.name as depart,c.type,c.date,c.link from
+        (select t.id,t.title,t.depart_id,t.type,t.date,t.link from subscribe s
+        inner join policy_title t on s.policy_id=t.id where s.user_id=#{userId})
+        as c inner join policy_depart d on c.depart_id=d.id
+    </select>
+
+    <select id="batchFindPolicyTitlesByIds" parameterType="java.util.List" resultType="PolicyTitle">
+        select t.id,t.title,t.depart_id,d.name as depart,t.type,t.date,t.link
+        from policy_title t inner join policy_depart d
+        on t.depart_id=d.id
+        where t.id in
+        <foreach collection="list" item="ids" open="(" close=")" separator=",">
+            #{ids}
+        </foreach>
+    </select>
+
+    <select id="findPolicyTitleByLink" parameterType="String" resultType="PolicyTitle">
+        select id,title,depart_id,date,link
+        from policy_title
+        where link=#{link}
+    </select>
+
+    <select id="findPolicyTitleByDate" parameterType="String" resultType="PolicyTitle">
+        select id,title,depart_id,date,link
+        from policy_title
+        <if test="startDate != null and endDate != null">
+            where
+            <![CDATA[DATE_FORMAT(date, '%Y-%m-%d')>=  DATE_FORMAT(#{startDate}, '%Y-%m-%d')]]>
+            <![CDATA[and DATE_FORMAT(date, '%Y-%m-%d') <= DATE_FORMAT(#{endDate}, '%Y-%m-%d')]]>
+        </if>
+    </select>
+
+    <update id="updatePolicyTitle" parameterType="com.longyan.policy.domain.PolicyTitle">
+        update policy_title
+        <trim prefix="set" suffixOverrides=",">
+            <if test="title!=null">title=#{title},</if>
+            <if test="departId!=null">depart_id=#{departId},</if>
+            <if test="type!=null">type=#{type},</if>
+            <if test="date!=null">date=#{date},</if>
+            <if test="link!=null">link=#{link},</if>
+        </trim>
+        where id=#{id}
+    </update>
 </mapper>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.longyan.policy.mapper.PolicyManageMapper">
+    <insert id="insertPolicyManage" useGeneratedKeys="true" keyProperty="id" parameterType="PolicyManage">
+        insert into policy_manage(policy_id,code)
+        values (#{policyId},#{code})
+    </insert>
+
+    <select id="getPolicyManage" parameterType="Integer" resultType="PolicyManage">
+        select id,policy_id,code
+        from policy_manage
+        where policy_id=#{policyId}
+    </select>
+
+    <select id="getPolicyManageByCode" parameterType="Integer" resultType="PolicyManage">
+        select id,policy_id,code
+        from policy_manage
+        where code=#{code}
+    </select>
+
+    <update id="updatePolicyManage" parameterType="PolicyManage">
+        update policy_manage
+        <trim suffixOverrides="," prefix="set">
+            <if test="policyId!=null">policy_id=#{policyId},</if>
+            <if test="code!=null">code=#{code},</if>
+        </trim>
+        where policy_id=#{policyId}
+    </update>
+
+    <delete id="deletePolicyManage" parameterType="Integer">
+        delete
+        from policy_manage
+        where policy_id=#{policyId}
+    </delete>
+</mapper>

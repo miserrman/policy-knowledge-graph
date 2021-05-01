@@ -14,7 +14,7 @@
                     </el-menu-item>
                     <el-menu-item index="/myAsk">
                         <i class="el-icon-phone"></i>
-                        <span>我的提问</span>
+                        <span>公司信息</span>
                     </el-menu-item>
                     <el-menu-item index="/myCollect">
                         <i class="el-icon-star-on"></i>

@@ -1,7 +1,7 @@
 <template>
   <div class="login-wrap">
     <div class="ms-login">
-      <div class="ms-title">问答系统</div>
+      <div class="ms-title">龙岩政策云平台</div>
       <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="0px" class="ms-content">
         <el-form-item prop="username">
           <el-input v-model="ruleForm.username" placeholder="username" clearable >
@@ -30,6 +30,8 @@
 <script>
   import log from '../util/log'
   import message from '@/util/message'
+  import axios from 'axios'
+  import api from '@/util/api'
   export default {
     name:'login',
     data: function(){
@@ -50,7 +52,28 @@
     },
     methods: {
       submitForm: function(formName) {
-        this.$router.push('/home')
+        let _this = this
+        if (this.ruleForm.username && this.ruleForm.password) {
+          axios.get(api.login, {
+            params: {
+              userName: _this.ruleForm.username,
+              password: _this.ruleForm.password
+            }
+          }).then(function(response) {
+            let data = response.data
+            if (data.errno === 0) {
+              sessionStorage.setItem("userInfo", data.data)
+              localStorage.setItem("role", data.data.role)
+              localStorage.setItem("userName", data.data.userName)
+              localStorage.setItem("userId", data.data.id)
+              localStorage.setItem("email", data.data.email)
+              localStorage.setItem("tele", data.data.tele)
+              _this.$store.commit("setUserInfo", data.data)
+              console.log(data.data.id)
+              _this.$router.push("/home")
+            }
+          })
+        }
       },
       searchPass:function(){
           // this.$message({

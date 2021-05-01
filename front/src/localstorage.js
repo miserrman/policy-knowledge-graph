@@ -8,8 +8,15 @@ const question = 'question'
 const isComment = 'isComment'
 const userDiscibe = 'userDiscibe'
 const otherUserID = 'otherUserID'
+const policyId = 'policyId'
 
 export default{
+  setPolicyId: function(data) {
+    window.sessionStorage.setItem(policyId, data)
+  },
+  getPolicyId: function () {
+    return window.sessionStorage.getItem(policyId)
+  },
   setUserID:function(data){
     window.sessionStorage.setItem(userID,data)
   },
